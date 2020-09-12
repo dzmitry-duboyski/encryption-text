@@ -1,0 +1,23 @@
+{
+  "name": "encryption-text",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch src/style/style.scss:src/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dzmitry-duboyski/encryption-text.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dzmitry-duboyski/encryption-text/issues"
+  },
+  "homepage": "https://github.com/dzmitry-duboyski/encryption-text#readme",
+  "devDependencies": {
+    "eslint": "^7.9.0"
+  }
+}
