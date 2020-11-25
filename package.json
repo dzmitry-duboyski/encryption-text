@@ -2,7 +2,7 @@
   "name": "encryption-text",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass --watch src/style/style.scss:src/style.css"
