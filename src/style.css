@@ -1,6 +1,13 @@
 * {
-  background: black;
   color: purple;
+}
+
+.wrapper {
+  height: 100vh;
+}
+
+.main .tempCode {
+  background: cadetblue;
 }
 
 /*# sourceMappingURL=style.css.map */

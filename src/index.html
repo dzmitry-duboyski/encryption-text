@@ -3,10 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
   <title>index</title>
 </head>
 <body>
-  index
+  <div class="container">
+    <div class="header">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Endcription text</h1>
+          <p class="lead">На самом деле  мы ничего не шифруем, мы просто заменяем все буквы буквами из других алфавитов.</p>
+          <ul>
+            <li>повышение уникальности  текста до 99.9%</li>
+            <li>позволяет обойти  ботов и плагины  проверяющие текст на цензуру или  по определенным ключам</li>
+            <li>исключают текст написанный вами из индексации поисковых систем (не проверено)</li>
+            <li>исключает возможнось быстрого поиска текста написаного вами</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <form action="#">
+        <div class="form-group">
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">
+              Вставьте текст в поле, и нажмите  кнопку для шифрования текста.</label>
+            <textarea id="textareaNotEncriptionText" class="form-control" id="exampleFormControlTextarea1" rows="3" ></textarea>
+          </div>
+          <button id="buttonStartEncryptyon" type="submit" class="btn btn-primary">шифровать</button>
+        </div>
+      </form>
+      <div id="tempCode" class="tempCode"></div>
+    </div>
+    <div class="footer"></div>
+  </div>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/index.js" type="module"></script>
 </body>
 </html>

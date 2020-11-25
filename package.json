@@ -19,5 +19,8 @@
   "homepage": "https://github.com/dzmitry-duboyski/encryption-text#readme",
   "devDependencies": {
     "eslint": "^7.9.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.2"
   }
 }
