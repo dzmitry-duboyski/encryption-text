@@ -7,7 +7,8 @@
 }
 
 .main .endcriptionText {
-  background: cadetblue;
+  background: #e9ecef;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

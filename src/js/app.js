@@ -3,8 +3,8 @@ import {getEncriptingText} from "./getEncriptingText.js";
 
 const view = {
   showEndcriptionText: function (endcriptionText = '') {
-    const el = document.getElementById('endcriptionText');
-    el.innerHTML = endcriptionText;
+    const elEndcriptionText = document.getElementById('endcriptionText');
+    elEndcriptionText.innerHTML = endcriptionText;
   },
 };
 
