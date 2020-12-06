@@ -10,5 +10,11 @@
   background: #e9ecef;
   cursor: pointer;
 }
+.main .endcriptionText .normalSimbol {
+  background-color: cadetblue;
+}
+.main .endcriptionText .alternativeSimbol {
+  background-color: chartreuse;
+}
 
 /*# sourceMappingURL=style.css.map */

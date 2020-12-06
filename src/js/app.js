@@ -16,7 +16,7 @@ const model = {
      if(isEmptyInputText) {
        return alert("введите текст");
      }
-     this.text = getEncriptingText(inputText).join('; ');
+     this.text = getEncriptingText(inputText).join('');
      return this.text;
   },
 }

@@ -7,35 +7,32 @@ import {characterList} from './constants/constants.js';
 const getRandomIndex = (min = 0, max) => {
   max = max -1; 
   let rand = min + Math.random() * (max + 1 - min);
-  console.log('getRandomIndex=' + Math.floor(rand));
   return Math.floor(rand);
 }
 
-
+/**
+ * @returns  "*" an asterisk in the returned text means that 
+ * the character has been replaced with an alternate
+ */
 export function getEncriptingText(inputText) {
   const arrCodeSymbol = inputText.split('').map((el) => el.charCodeAt())
-  // console.log("arrCodeSymbol: "+arrCodeSymbol);
-  // console.log(arrCodeSymbol);
 
-  const updateText = arrCodeSymbol.map((el)=> {
+  const updateTextCodeSymbols = arrCodeSymbol.map((el)=> {
     //el - это код символа
-    // console.log(characterList.hasOwnProperty(el));
     const isIncludedInCharacterList = characterList.hasOwnProperty(el);
     if(isIncludedInCharacterList){
       
-      //если символ есть в базе
       const arrayAlternativeCharacters = characterList[`${el}`];
       const lengthArrayAlternativeCharacters = Array(...characterList[`${el}`]).length;
-      console.log(lengthArrayAlternativeCharacters);
+      // console.log(lengthArrayAlternativeCharacters);
       const randomIndex = getRandomIndex(0,lengthArrayAlternativeCharacters);
       const newCharacter = arrayAlternativeCharacters[randomIndex];
-      console.log(newCharacter);
-      return 'XXX';
+      // console.log(newCharacter);
+      return `*${newCharacter}`;
     }
-    return el;
+    const oldCharacter = String(el);
+    return oldCharacter;
   })
-
-
 
   // result = result.split(';')
   // console.log(result)
@@ -43,6 +40,24 @@ export function getEncriptingText(inputText) {
   // console.log(typeof(result))
   // console.log(isSymolIncludedInTheLibrary(String(result[0])));
 
-  console.log(updateText)
-  return updateText;
+  console.log(updateTextCodeSymbols)
+
+  const resultText = updateTextCodeSymbols.map((el,idx) => {
+    const isAlternativeSymbols = String(el).includes('*')
+    if(isAlternativeSymbols) {
+      const outputEl = el.replace('*','')
+      console.log(outputEl)
+      const newWord = String.fromCodePoint(Number(outputEl));
+      console.log(newWord)
+      return `<span class="alternativeSimbol">${newWord}</span>`;
+    }
+    console.log(isAlternativeSymbols)
+    const oldWord = String.fromCodePoint(Number(el));
+    return `<span class="normalSimbol">${oldWord}</span>`;
+  })
+ // console.log( resultText.join())
+//  console.log(typeof(resultText))
+//  const res = Array(...resultText).join("");
+//  console.log(res)
+  return resultText;
 }

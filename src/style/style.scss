@@ -9,5 +9,14 @@
   .endcriptionText {
     background: #e9ecef;
     cursor: pointer;
+
+    .normalSimbol{
+      background-color: cadetblue;
+    }
+
+    .alternativeSimbol{
+      background-color: chartreuse;
+    }
+
   }
 }
