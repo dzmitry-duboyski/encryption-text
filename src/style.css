@@ -3,6 +3,8 @@
 }
 
 .main .endcriptionText {
+  width: 100%;
+  overflow: hidden;
   background: #e9ecef;
   cursor: pointer;
 }
@@ -11,6 +13,12 @@
 }
 .main .endcriptionText .alternativeSimbol {
   background-color: #db171769;
+}
+.main .hidden {
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  z-index: -100;
 }
 
 /*# sourceMappingURL=style.css.map */

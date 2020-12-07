@@ -6,10 +6,12 @@
 }
 
 .main {
+
   .endcriptionText {
+    width: 100%;
+    overflow: hidden;
     background: #e9ecef;
     cursor: pointer;
-    // : black;
 
     .normalSimbol{
       background-color: #28a74566;
@@ -18,6 +20,12 @@
     .alternativeSimbol{
       background-color: #db171769;
     }
+  }
 
+  .hidden {
+      position: absolute;
+      top: -100px;
+      left: -100px;
+      z-index: -100;
   }
 }
