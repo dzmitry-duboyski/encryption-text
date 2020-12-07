@@ -5,6 +5,14 @@ const view = {
     const elEndcriptionText = document.getElementById('endcriptionText');
     elEndcriptionText.innerHTML = endcriptionText;
   },
+  showMyModal: function () {
+    $('#myModal').modal('show');
+    this.hiheMyModal();
+  },
+  hiheMyModal: function () {
+    const hiheMyModal = () => $('#myModal').modal('hide'); 
+    setTimeout(hiheMyModal, 1000);
+  }
 };
 
 const model = {
@@ -17,6 +25,7 @@ const model = {
      this.text = getEncriptingText(inputText).join('');
      return this.text;
   },
+
 }
 
 const controller = {
@@ -32,8 +41,8 @@ const controller = {
     console.log(outputText)
     outputTextArea.select();
     document.execCommand("copy");
-
-    console.log(`текст "${outputText}" скопирован  в буфер обмена`);
+    
+    view.showMyModal();
   }
 };
 
