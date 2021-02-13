@@ -2,11 +2,14 @@
   "name": "encryption-text",
   "version": "0.1.1",
   "description": "",
-  "main": "index.html",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --watch src/style/style.scss:src/style.css"
+    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "dev": "cross-env NODE_ENV=development webpack --mode development",
+    "watch": "cross-env NODE_ENV=development webpack --mode development --watch",
+    "start:dev": "cross-env NODE_ENV=development webpack serve --open"
   },
+  "browserslist": "> 0.25%, not dead",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dzmitry-duboyski/encryption-text.git"
@@ -18,9 +21,32 @@
   },
   "homepage": "https://github.com/dzmitry-duboyski/encryption-text#readme",
   "devDependencies": {
-    "eslint": "^7.9.0"
+    "eslint": "^7.9.0",
+    "@babel/core": "^7.12.16",
+    "@babel/plugin-proposal-class-properties": "^7.12.13",
+    "@babel/preset-env": "^7.12.16",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^7.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.0.2",
+    "csv-loader": "^3.0.3",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.0.0",
+    "mini-css-extract-plugin": "^1.3.6",
+    "node-sass": "^5.0.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.21.2",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2",
+    "xml-loader": "^1.2.1"
   },
   "dependencies": {
-    "bootstrap": "^4.5.2"
+    "bootstrap": "^4.5.2",
+    "@babel/polyfill": "^7.12.1",
+    "jquery": "^3.5.1",
+    "normalize.css": "^8.0.1"
   }
 }
