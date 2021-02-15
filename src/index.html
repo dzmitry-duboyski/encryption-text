@@ -3,51 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>index</title>
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <title>title</title>
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <h1 class="display-4">Endcription text</h1>
-          <p class="lead">На самом деле  мы ничего не шифруем, мы просто заменяем буквы, буквами из других алфавитов.</p>
-          <ul>
-            <li>повышение уникальности  текста до 99.9%</li>
-            <li>позволяет обойти  ботов и плагины  проверяющие текст на цензуру или  по определенным ключам</li>
-            <li>исключают текст написанный вами из индексации поисковых систем (не проверено)</li>
-            <li>исключает возможнось быстрого поиска текста написаного вами</li>
-          </ul>
-        </div>
+   <section class="header">
+    <div class="container">
+      <div class="header__logo">
+        logo
       </div>
-    </div>
-    <div class="main">
-
-      <div id="myModal" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-sm">
-          <div class="modal-content">
-            <h3>Текст скопирован</h3>
+      <div class="menu">
+        <div class="menu__wrapper">
+          <!-- <div class="menu__item menu__item_active"><a href="#" class="menu__link">main</a></div> -->
+          <div class="menu__item menu__item_active"><a href="#" class="menu__link menu__link_text-uppercase">docs</a></div>
+          <div class="menu__item"><a href="#" class="menu__link">api</a></div>
+          <div class="menu__item"><a href="#" class="menu__link">donate</a></div>
+          <div class="menu__item"><a href="https://github.com/dzmitry-duboyski/encryption-text" class="menu__link">gitHub</a></div>
+          <div class="language-swithing">
+            <ul class="language-list">
+              <li class="language-list__item">
+                <a class="language-list__item-link language-list__item-link_active" href="#" data-language="En">En</a>
+              </li>
+              <li class="language-list__item">
+                <a class="language-list__item-link" href="#" data-language="Ru">Ru</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
+    </div>
+  </section>
+  <section class="main">
+    <div class="container">
+      <h1>protect your text</h1>
+    </div>
+  </section>
+  <section class="how-it-works">
+    <div class="container">
+      <p>how-it-works</p>
+    </div>
+  </section>
+  <section class="use">
+    <div class="container">
+      <p>use</p>
+    </div>
+  </section>
+
 
  
-      <form action="#">
+      <!-- <form action="#">
         <div class="form-group">
           <div class="form-group">
-            <label for="exampleFormControlTextarea1">
-              Вставьте текст в поле, и нажмите  кнопку для шифрования текста.</label>
-            <textarea id="textareaNotEncriptionText" class="form-control" id="exampleFormControlTextarea1" rows="3" >о</textarea>
+            <textarea id="textareaNotEncriptionText" class="form-control" id="exampleFormControlTextarea1" rows="3" ></textarea>
           </div>
           <button id="buttonStartEncryptyon" type="submit" class="btn btn-primary" title="start magic">шифровать</button>
         </div>
-      </form>
-      <output id="endcriptionText" class="endcriptionText" title="Click to copy text"></output>
-      <textarea class="hidden" id="outputTextArea"></textarea>
-    </div>
-    <div class="footer"></div>
-  </div>
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-
+        <output id="endcriptionText" class="endcriptionText" title="Click to copy text"></output>
+        <textarea class="hidden" id="outputTextArea"></textarea>
+      </form> -->
 </body>
 </html>

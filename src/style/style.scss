@@ -1,31 +1,126 @@
-* {
- // color:purple;
+$backgroundColor__header: #323330;
+$backgroundColor__main: #3b3c38;
+
+body {
+  font-size: 10px;
+  font-family: 'Roboto-Black';
+  font-weight: 400;
+  color: #ffffff;
 }
-.wrapper {
-  height: 100vh;
-}
 
-.main {
+.header {
+  position: fixed;
+  top: 0;
+  height: 50px;
+  width: 100%;
 
-  .endcriptionText {
-    width: 100%;
-    overflow: hidden;
-    background: #e9ecef;
-    cursor: pointer;
+  background-color: $backgroundColor__header;
 
-    .normalSimbol{
-      background-color: #28a74566;
-    }
-
-    .alternativeSimbol{
-      background-color: #db171769;
-    }
+  .container{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
-  .hidden {
-      position: absolute;
-      top: -100px;
-      left: -100px;
-      z-index: -100;
+  .header__logo {
+    background-color: #f3f3f3;
+    height: 35px;
+    width: 70px;
+    color: #3b3c38;
+    font-size: 1.7rem;
+  }
+
+  .menu {
+    display: flex;
+
+    .menu__wrapper{
+      display: flex;
+      align-items: center;
+    }
+
+    .menu__item{
+      padding-right: 17px;
+      text-transform: capitalize;
+    }
+
+    .menu__item_active{
+      .menu__link {
+        color: #f5da55;
+      }
+    }
+
+    .menu__link_text-uppercase{
+      text-transform: uppercase;
+    }
+
+    .menu__link{
+      color: #fff;
+      font-size: 1.1rem;
+      text-decoration: none;
+    }
+
+    .menu__link:hover{
+      color: #f5da55;
+    }
+   
+    .language-swithing{
+      .language-list{
+        display: flex;
+
+        
+        .language-list__item {
+          list-style: none;
+          padding: 3px;
+
+          .language-list__item-link{
+            color: #72726c;
+            text-decoration: none;
+            font-size: 1.1rem;
+          }
+
+          .language-list__item-link:hover{
+            color: #fff;
+          }
+          .language-list__item-link_active{
+            color: #fff;
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.main{
+  background-color: $backgroundColor__main;
+  height: 100vh;
+  max-height: 831px;
+  margin-top: 50px;    /* как переделать без маржинов? */
+
+    .container{
+    padding: 25px;
+  }
+}
+
+.how-it-works{
+  background-color: #ffffff;
+  height: 50vh;
+  color: #000;
+
+  .container{
+    padding: 25px;
+  }
+}
+
+.use{
+  background-color: rgb(104, 11, 11);
+  height: 50vh;
+
+  .container{
+    padding: 25px;
   }
 }

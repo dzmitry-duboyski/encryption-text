@@ -47,6 +47,6 @@
     "bootstrap": "^4.5.2",
     "@babel/polyfill": "^7.12.1",
     "jquery": "^3.5.1",
-    "normalize.css": "^8.0.1"
+    "f": "^8.0.1"
   }
 }
