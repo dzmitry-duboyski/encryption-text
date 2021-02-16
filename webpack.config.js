@@ -10,22 +10,22 @@ const TerserPlugin = require("terser-webpack-plugin");
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
 
-const optimization = () => {
-  const config = {
-    splitChunks: {
-      chunks: 'all'
-    },
-  }
-  if(isProd){
-    config.minimizer = [
-      new OptimizeCssAssetsPlugin(),
-      new TerserPlugin(),
-    ]
-  }
-  return config;  
-}
+// const optimization = () => {
+//   const config = {
+//     splitChunks: {
+//       chunks: 'all'
+//     },
+//   }
+//   if(isProd){
+//     config.minimizer = [
+//       new OptimizeCssAssetsPlugin(),
+//       new TerserPlugin(),
+//     ]
+//   }
+//   return config;  
+// }
 
-const filename = ext => isDev ? `[name].${ext}` :`[name].[hash].${ext}`;
+const filename = ext => isDev ? `[name].${ext}` :`[name].[fullhash].${ext}`;
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
@@ -44,7 +44,7 @@ module.exports = {
       '@': path.resolve(__dirname,'src'),      
     }
   },
-  optimization: optimization(),
+  // optimization: optimization(),
   devServer: {
       contentBase: './dist',
       // publicPath: './dist',
