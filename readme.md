@@ -4,7 +4,7 @@
 deploy status: [![Netlify Status](https://api.netlify.com/api/v1/badges/599620a0-36f3-47eb-9788-ee87b7e43d3b/deploy-status)](https://app.netlify.com/sites/encription-text/deploys)
 
 
-![alphabet](https://github.com/dzmitry-duboyski/encryption-text/tree/dev/src/assets/img/photo_alphabet.jpg)
+![alphabet](https://raw.githubusercontent.com/dzmitry-duboyski/encryption-text/dev/src/assets/img/photo_alphabet.jpg)
 
  **How it works**
 The characters of the language you use when printing are contained in the [Unicode](https://en.wikipedia.org/wiki/List_of_Unicode_characters) table. The characters used in your language occupy a specific range of the Unicode table. The Unicode table includes characters from almost every written language in the world. Also in this table there are symbols that look similar or that can be understood in the same way.
