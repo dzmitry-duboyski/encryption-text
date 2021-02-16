@@ -195,6 +195,11 @@ body {
           border-top: 1px solid $encoder-block__border;
           border-right: 1px solid $encoder-block__border;
         }
+        .encoder-block-start__header{
+          cursor: pointer;
+        }
+
+
         .encoder-block-start__textarea,
         .encoder-block-end__textarea {
           width: 450px;
