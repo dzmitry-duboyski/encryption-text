@@ -1,6 +1,5 @@
-import './js/app';
+// import './js/app';
 import './style/style.scss';
-import './style/font/font.scss';
 import 'normalize.css';
 
 

@@ -5,6 +5,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require("terser-webpack-plugin");
+// require('../index.html');
 
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
@@ -34,7 +35,8 @@ module.exports = {
   },
   output: {
     filename: filename('js'),
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, './dist'),
+    // publicPath: '/',
   },
   resolve: {
     alias: {
@@ -44,13 +46,23 @@ module.exports = {
   },
   optimization: optimization(),
   devServer: {
-    port:8282,
+      contentBase: './dist',
+      // publicPath: './dist',
+      inline: true,
+      hot: true,
+      // contentBase: './dist',
+      // contentBase: path.join(__dirname, 'dist'),
+      // port: 9000,
+      // hot: false,
+      // liveReload: false,
+      // watchContentBase: true,
+      // open: true,
+      // inline: true,
   },
+  devtool: 'inline-source-map',
   plugins: [
     new HTMLWebpackPlugin({
-      // title: 'webpack config' //можно прописать title для созданого файла 
       template: './index.html',
-
     }),
     new CleanWebpackPlugin(),
     new CopyPlugin({

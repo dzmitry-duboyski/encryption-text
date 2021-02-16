@@ -1,11 +1,61 @@
+@import './base/mormalize';
+
 $backgroundColor__header: #323330;
 $backgroundColor__main: #3b3c38;
+$encoder-block__header-background: #353634;
+$encoder-block__header-text: #f5da55;
+$encoder-block__textarea-background: #1d1f21;
+$encoder-block__text: #b2b8b7;
+$encoder-block__border: #61635e;
+
+
+
+@font-face {
+  font-family: 'Roboto Bold';
+  src: url('../assets/fonts/Roboto/roboto-bold-webfont.eot');
+  src: url('../assets/fonts/Roboto/roboto-bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/Roboto/roboto-bold-webfont.woff2') format('woff2'),
+       url('../assets/fonts/Roboto/roboto-bold-webfont.woff') format('woff'),
+       url('../assets/fonts/Roboto/roboto-bold-webfont.svg#robotobold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+@font-face {
+  font-family: '../assets/fonts/Roboto/Roboto Medium';
+  src: url('../assets/fonts/Roboto/roboto-medium-webfont.eot');
+  src: url('../assets/fonts/Roboto/roboto-medium-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/Roboto/roboto-medium-webfont.woff2') format('woff2'),
+       url('../assets/fonts/Roboto/roboto-medium-webfont.woff') format('woff'),
+       url('../assets/fonts/Roboto/roboto-medium-webfont.svg#robotomedium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'Roboto Thin';
+  src: url('../assets/fonts/Roboto/roboto-thin-webfont.eot');
+  src: url('../assets/fonts/Roboto/roboto-thin-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/Roboto/roboto-thin-webfont.woff2') format('woff2'),
+       url('../assets/fonts/Roboto/roboto-thin-webfont.woff') format('woff'),
+       url('../assets/fonts/Roboto/roboto-thin-webfont.svg#robotothin') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
 
 body {
   font-size: 10px;
-  font-family: 'Roboto-Black';
-  font-weight: 400;
+  font-family: 'Roboto Bold';
   color: #ffffff;
+}
+
+* { 
+  // border: 1px solid red;
+  box-sizing: border-box;
 }
 
 .header {
@@ -13,6 +63,7 @@ body {
   top: 0;
   height: 50px;
   width: 100%;
+  // border-bottom: 1px solid black;
 
   background-color: $backgroundColor__header;
 
@@ -77,7 +128,7 @@ body {
           padding: 3px;
 
           .language-list__item-link{
-            color: #72726c;
+            color: #ababa4;
             text-decoration: none;
             font-size: 1.1rem;
           }
@@ -101,9 +152,76 @@ body {
   max-height: 831px;
   margin-top: 50px;    /* как переделать без маржинов? */
 
-    .container{
-    padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  .main-wripper{
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    
+    .main-wripper__header{
+      padding-top: 100px;
+      font-size: 3rem;
+      text-align: center;
+      color: $encoder-block__header-text;
+    }
+
+    .main-wripper__description{
+      text-align: center;
+      font-size: 1.1rem;
+      padding: 0 50px ;
+    }
+
+
+    .encoder-container{
+      display: flex;
+
+      .encoder-block-start,
+      .encoder-block-end {
+        width: 50%;
+        box-sizing: border-box; 
+        padding: 0;
+
+        .encoder-block-start__header,
+        .encoder-block-end__header {
+          height: 50px;
+          padding: 10px;
+          font-size: 1.5rem;
+          background-color: $encoder-block__header-background;
+          color: $encoder-block__text;
+          border-left: 1px solid $encoder-block__border;
+          border-top: 1px solid $encoder-block__border;
+          border-right: 1px solid $encoder-block__border;
+        }
+        .encoder-block-start__textarea,
+        .encoder-block-end__textarea {
+          width: 450px;
+          height: 200px;
+          background-color: $encoder-block__textarea-background;
+          padding: 20px;
+          font-size: 1.1rem;   
+          outline : none;
+          resize : none;
+          border-left: 1px solid $encoder-block__border;
+          border-top:none;
+          border-right: 1px solid $encoder-block__border;
+          border-bottom: 1px solid $encoder-block__border;
+          color: $encoder-block__text;
+        }
+      }
+
+      // .encoder-block-end{
+      //   .encoder-block-end__textarea{
+          
+      //  }
+      // }
+    }
+
   }
+
+
 }
 
 .how-it-works{

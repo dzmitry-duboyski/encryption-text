@@ -14,7 +14,6 @@
       </div>
       <div class="menu">
         <div class="menu__wrapper">
-          <!-- <div class="menu__item menu__item_active"><a href="#" class="menu__link">main</a></div> -->
           <div class="menu__item menu__item_active"><a href="#" class="menu__link menu__link_text-uppercase">docs</a></div>
           <div class="menu__item"><a href="#" class="menu__link">api</a></div>
           <div class="menu__item"><a href="#" class="menu__link">donate</a></div>
@@ -34,8 +33,23 @@
     </div>
   </section>
   <section class="main">
-    <div class="container">
-      <h1>protect your text</h1>
+    <div class="main-wripper">
+      <h1 class="main-wripper__header">Protect your text</h1>
+      <p class="main-wripper__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi assumenda magnam amet soluta vitae placeat, fuga voluptatem molestiae pariatur expedita voluptas in laborum, corrupti dicta fugit saepe modi delectus ipsum!</p>
+      <div class="encoder-container">
+
+        <div class="encoder-block-start">
+          <div class="encoder-block-start__header">Insert your text</div>
+            <textarea class="encoder-block-start__textarea" name="" id="" cols="30" rows="10" placeholder="type some text" ></textarea>
+        </div>
+        <div class="encoder-block-end">
+          <div class="encoder-block-end__header">Get converted text</div>
+            <textarea class="encoder-block-end__textarea" name="" id="" cols="30" rows="10" disabled></textarea>
+        </div>
+
+        <!-- <div class="encoder-block-end"></div> -->
+
+      </div>
     </div>
   </section>
   <section class="how-it-works">
@@ -49,8 +63,6 @@
     </div>
   </section>
 
-
- 
       <!-- <form action="#">
         <div class="form-group">
           <div class="form-group">
@@ -61,5 +73,6 @@
         <output id="endcriptionText" class="endcriptionText" title="Click to copy text"></output>
         <textarea class="hidden" id="outputTextArea"></textarea>
       </form> -->
+
 </body>
 </html>
