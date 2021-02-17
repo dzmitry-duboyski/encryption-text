@@ -1,17 +1,20 @@
 
-### [encription-text.netlify.app](https://encription-text.netlify.app/)
+# Deploy: [encription-text.netlify.app](https://encription-text.netlify.app/)
 
 deploy status: [![Netlify Status](https://api.netlify.com/api/v1/badges/599620a0-36f3-47eb-9788-ee87b7e43d3b/deploy-status)](https://app.netlify.com/sites/encription-text/deploys)
 
+---
 
 ![alphabet](https://raw.githubusercontent.com/dzmitry-duboyski/encryption-text/dev/src/assets/img/photo_alphabet.jpg)
 
- **How it works**
+ **How it works:**
+
+
 The characters of the language you use when printing are contained in the [Unicode](https://en.wikipedia.org/wiki/List_of_Unicode_characters) table. The characters used in your language occupy a specific range of the Unicode table. The Unicode table includes characters from almost every written language in the world. Also in this table there are symbols that look similar or that can be understood in the same way.
 
 The main idea is to replace characters in your text with other characters from the code table that look the same or similar. After processing, the appearance of the text may change, but the meaning will not be lost. After replacing characters, your text will remain readable for humans, but processing it by various systems will be significantly complicated.
 
-пш
+
 
 **Application area:**
 
