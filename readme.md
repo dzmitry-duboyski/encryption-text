@@ -7,6 +7,7 @@ deploy status: [![Netlify Status](https://api.netlify.com/api/v1/badges/599620a0
 
 ![alphabet](https://raw.githubusercontent.com/dzmitry-duboyski/encryption-text/dev/src/assets/img/photo_alphabet.jpg)
 
+
  **How it works:**
 
 
