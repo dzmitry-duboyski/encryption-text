@@ -9,25 +9,29 @@ const eventListener = (e) => {
   e.preventDefault();
 
   if(e.target.className == 'scrollup__image'){
-    console.log('scroll')
-    document.querySelector('body').scrollIntoView({behavior: "smooth"})
-
+    document.querySelector('body').scrollIntoView({behavior: "smooth", block: 'start'})
   }
+
   if(e.target.dataset.menuitem == 'docs'){
     alert(`section "${e.target.dataset.menuitem}" in development`)
   }
+
   if(e.target.dataset.menuitem == 'api'){
     alert(`section "${e.target.dataset.menuitem}" in development`)
   }
+
   if(e.target.dataset.menuitem == 'donate'){
     alert(`section "${e.target.dataset.menuitem}" in development`)
   }
+
   if(e.target.dataset.menuitem == 'gitHub'){
     alert(`section "${e.target.dataset.menuitem}" in development`)
   }
+
   if(e.target.dataset.language == 'En'){
     alert(`section "${e.target.dataset.language}" in development`)
   }
+  
   if(e.target.dataset.language == 'Ru'){
     alert(`section "${e.target.dataset.language}" in development`)
   }

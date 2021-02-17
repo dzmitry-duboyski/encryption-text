@@ -75,7 +75,6 @@ body {
 
   
   * { 
-  // border: 1px solid red;
   box-sizing: border-box;
 }
 
@@ -197,32 +196,30 @@ body {
 }
 
 .main{
-  background-color: $backgroundColor__main;
   height: 100vh;
-  max-height: 831px;
+  max-height: 881px;
   min-height: 580px;
-  margin-top: 50px;    /* как переделать без маржинов? */
-
   display: flex;
   justify-content: center;
   align-items: flex-start;
-
+  background-color: $backgroundColor__main;
+  
   .main-wripper{
+    width: 900px;
     display: flex;
     flex-direction: column;
-    width: 900px;
     
     .main-wripper__header{
-      padding-top: 100px;
+      padding-top: 150px;
       font-size: 3rem;
       text-align: center;
       color: $encoder-block__header-text;
     }
 
     .main-wripper__description{
+      padding: 0 50px ;
       text-align: center;
       font-size: 1.1rem;
-      padding: 0 50px ;
     }
 
 
