@@ -14,10 +14,10 @@
       </div>
       <div class="menu">
         <div class="menu__wrapper">
-          <div class="menu__item menu__item_active"><a href="#" class="menu__link menu__link_text-uppercase">docs</a></div>
-          <div class="menu__item"><a href="#" class="menu__link">api</a></div>
-          <div class="menu__item"><a href="#" class="menu__link">donate</a></div>
-          <div class="menu__item"><a href="https://github.com/dzmitry-duboyski/encryption-text" class="menu__link">gitHub</a></div>
+          <div class="menu__item menu__item_active"><a href="#" class="menu__link menu__link_text-uppercase" data-menuItem="docs">docs</a></div>
+          <div class="menu__item"><a href="#" class="menu__link" data-menuItem="api">api</a></div>
+          <div class="menu__item"><a href="#" class="menu__link" data-menuItem="donate">donate</a></div>
+          <div class="menu__item"><a href="https://github.com/dzmitry-duboyski/encryption-text" class="menu__link" data-menuItem="gitHub">gitHub</a></div>
           <div class="language-swithing">
             <ul class="language-list">
               <li class="language-list__item">
@@ -32,6 +32,9 @@
       </div>
     </div>
   </section>
+  <div class="scrollup scrollup_hidden">
+    <img class="scrollup__image" src="./scrollup.png" alt="scrollup">
+  </div>
   <section class="main">
     <div class="main-wripper">
       <h1 class="main-wripper__header">Protect your text</h1>
@@ -71,7 +74,11 @@
       </ul>
     </div>
   </section>
-
+  <footer>
+    <div class="container">
+      <p>© 2021</p>
+    </div>
+  </footer>
       <!-- <form action="#">
         <div class="form-group">
           <div class="form-group">
@@ -82,6 +89,5 @@
         <output id="endcriptionText" class="endcriptionText" title="Click to copy text"></output>
         <textarea class="hidden" id="outputTextArea"></textarea>
       </form> -->
-
 </body>
 </html>
