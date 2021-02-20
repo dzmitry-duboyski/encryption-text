@@ -32,15 +32,15 @@ body {
 /**
  * Basic styles for links
  */
-a {
-  color: $brand-color;
-  text-decoration: none;
+// a {
+//   color: $brand-color;
+//   text-decoration: none;
 
-  @include on-event {
-    color: $text-color;
-    text-decoration: underline;
-  }
-}
+// //   @include on-event {
+// //     color: $text-color;
+// //     text-decoration: underline;
+// //   }
+// }
 
 .header__logo {
   opacity: 0;
@@ -73,12 +73,12 @@ a {
 
     ul {
       padding: 0;
-    }
 
-    li {
-      padding-bottom: 20px;
-      list-style-type: square;
-      list-style-position: inside;
+      li {
+        padding-bottom: 20px;
+        list-style-type: square;
+        list-style-position: inside;
+      }
     }
   }
 }
