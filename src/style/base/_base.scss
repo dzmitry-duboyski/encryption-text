@@ -1,0 +1,85 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+/**
+* Basic styles for body
+*/
+body {
+  @extend %custom-scroll; 
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  color: $brand-color;
+  text-decoration: none;
+
+  @include on-event {
+    color: $text-color;
+    text-decoration: underline;
+  }
+}
+
+.header__logo {
+  opacity: 0;
+  height: 35px;
+  width: 70px;
+  background-color: #f3f3f3;
+  color: #3b3c38;
+}
+
+.how-it-works {
+  height: 50vh;
+  min-height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    width: 600px;
+  }
+}
+
+.application-area {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    width: 600px;
+
+    ul {
+      padding: 0;
+    }
+
+    li {
+      padding-bottom: 20px;
+      list-style-type: square;
+      list-style-position: inside;
+    }
+  }
+}
+

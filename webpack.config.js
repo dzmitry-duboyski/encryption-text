@@ -3,8 +3,8 @@ const HTMLWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const TerserPlugin = require("terser-webpack-plugin");
+// const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+// const TerserPlugin = require("terser-webpack-plugin");
 // require('../index.html');
 
 const isDev = process.env.NODE_ENV === 'development';
@@ -41,7 +41,8 @@ module.exports = {
   resolve: {
     alias: {
       '@models': path.resolve(__dirname,'src/models'),      
-      '@': path.resolve(__dirname,'src'),      
+      '@': path.resolve(__dirname,'src'),
+      '@fonts': path.resolve(__dirname, 'src/assets/fonts/Roboto')
     }
   },
   // optimization: optimization(),

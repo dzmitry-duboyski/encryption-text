@@ -1,6 +1,5 @@
 // import './js/app';
-import './style/style.scss';
-import 'normalize.css';
+import './style/main.scss';
 
 console.log('index.js')
 

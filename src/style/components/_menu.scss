@@ -1,0 +1,18 @@
+.menu {
+  display: flex;
+  align-items: center;
+
+  .menu__item{
+    padding-right: 17px;
+    text-transform: capitalize;
+  }
+
+  .menu__link{
+    font-size: 1.1rem;
+    text-decoration: none;
+  }
+
+  .menu__link_text-uppercase{
+    text-transform: uppercase;
+  }
+}   

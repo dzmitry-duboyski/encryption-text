@@ -1,0 +1,138 @@
+// -----------------------------------------------------------------------------
+// When having several themes, this file contains everything related to the
+// default one.
+// -----------------------------------------------------------------------------
+
+
+/** 
+*
+* Color from Header
+*
+*/
+.header.header_theme-default {
+  background-color: hsl(80, 3%, 19%);
+}
+
+
+.menu.menu_theme-default {
+
+  .menu__item_active{
+    .menu__link {
+      color: #f5da55;
+    }
+  }
+
+  .menu__link{
+    color: #fff;
+  }
+
+  .menu__link:hover{
+    color: #f5da55;
+  }
+} 
+
+
+.language-list__item-link{
+  color: #ababa4;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+.language-list__item-link:hover{
+  color: #fff;
+}
+
+.language-list__item-link_active{
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+
+
+
+
+/** 
+*
+* Color from Main
+*
+*/
+.main {
+  background-color: hsl(75, 3%, 23%);;
+}
+
+.main-wrapper__header{
+  color:  hsl(50, 89%, 65%);
+}
+
+$encoder-block__border: hsl(84, 3%, 38%);
+
+.encoder-block-start__header,
+.encoder-block-end__header {
+  background-color: hsl(90, 2%, 21%);
+  color: hsl(170, 4%, 71%);
+  border-left: 1px solid $encoder-block__border;
+  border-top: 1px solid $encoder-block__border;
+  border-right: 1px solid $encoder-block__border;
+}
+
+.encoder-block-start__textarea,
+.encoder-block-end__textarea {
+  background-color:  hsl(210, 6%, 12%);
+  color: hsl(170, 4%, 71%);
+  border-left: 1px solid $encoder-block__border;
+  border-right: 1px solid $encoder-block__border;
+  border-bottom: 1px solid $encoder-block__border;
+}
+
+
+
+
+
+/** 
+*
+* Color from block 'how-it-works'
+*
+*/
+.how-it-works {
+  background-color: hsl(52, 16%, 82%);
+  color: hsl(0, 4%, 16%);
+}
+
+
+
+
+
+/** 
+*
+* Color from block 'how-it-works'
+*
+*/
+.application-area {
+  background-color: hsl(240, 1%, 51%);
+  color: hsl(58, 80%, 6%);
+}
+
+
+
+
+/** 
+*
+* Color from scrollup
+*
+*/
+.scrollup__image:hover{
+  background-color:hsl(50, 89%, 65%);
+}
+
+
+
+
+/** 
+*
+* Color from Footer
+*
+*/
+footer {
+  background-color: hsl(80, 3%, 19%);
+  color: hsl(52, 16%, 82%);
+}

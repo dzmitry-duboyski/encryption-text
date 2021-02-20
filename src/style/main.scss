@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins';
+
+// 2. Vendors
+@import
+  'vendors/normalize';
+
+// 3. Base stuff
+@import
+  'base/base',
+  'base/fonts',
+  'base/typography',
+  'base/helpers';
+
+// 4. Layout-related sections
+@import
+  'layout/header',
+  'layout/footer',
+  'layout/scrollup',
+  'layout/main';
+
+
+// 5. Components
+@import
+  'components/button',
+  'components/scrollup',
+  'components/menu',
+  'components/language-swithing',
+  'components/main';
+
+// 6. Page-specific styles
+@import
+  'pages/home';
+
+// 7. Themes
+@import
+  'themes/default';
+
+
+
+//  fix me latter (move to a separate file)
+@font-face {
+  font-family: 'Roboto Bold';
+  src: url('../assets/fonts/Roboto/roboto-bold-webfont.eot');
+  src: url('../assets/fonts/Roboto/roboto-bold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/Roboto/roboto-bold-webfont.woff2') format('woff2'),
+        url('../assets/fonts/Roboto/roboto-bold-webfont.woff') format('woff'),
+        url('../assets/fonts/Roboto/roboto-bold-webfont.svg#robotobold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

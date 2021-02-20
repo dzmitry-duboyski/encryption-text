@@ -1,0 +1,19 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the main block.
+// -----------------------------------------------------------------------------
+
+
+.main {
+  height: 100vh;
+  max-height: 881px;
+  min-height: 580px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  .main-wrapper{
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+  }
+}

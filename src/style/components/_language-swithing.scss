@@ -1,0 +1,24 @@
+.language-list{
+  display: flex;
+  align-items: baseline;
+}
+
+.language-list__item {
+  list-style: none;
+  padding: 3px;
+} 
+
+.language-list__item-link{
+  color: #ababa4;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+.language-list__item-link:hover{
+  color: #fff;
+}
+
+.language-list__item-link_active{
+  color: #fff;
+  font-size: 1.1rem;
+}

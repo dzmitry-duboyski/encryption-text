@@ -1,0 +1,36 @@
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: $text-color;
+  font-size: 10px;
+  font-family: 'Roboto Bold';
+}
+
+.header__logo {
+  font-size: 1.7rem;
+}
+
+.main-wrapper__header {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.main-wrapper__description {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.how-it-works {
+  text-align: justify;
+  font-size: 1.1rem;
+}
+
+.application-area {
+  text-align: justify;
+  font-size: 1.1rem;
+}
+
+footer {
+  font-size: 0.9rem;
+}
