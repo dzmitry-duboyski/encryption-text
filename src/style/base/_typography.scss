@@ -5,7 +5,7 @@
 body {
   color: hsl(0, 0%, 100%);
   font-size: 10px;
-  font-family: 'Roboto Bold';
+  font-family: 'Roboto Medium';
 }
 
 .header__logo {
@@ -15,11 +15,19 @@ body {
 .main-wrapper__header {
   font-size: 3rem;
   text-align: center;
+  font-family: 'Roboto Bold';
 }
 
 .main-wrapper__description {
   text-align: center;
   font-size: 1.1rem;
+  font-family: 'Roboto Thin';
+}
+
+.encoder-block-end__header,
+.encoder-block-start__header {
+  font-family: 'Roboto Medium';
+
 }
 
 .how-it-works {
@@ -30,8 +38,10 @@ body {
 .application-area {
   text-align: justify;
   font-size: 1.1rem;
+
 }
 
 footer {
   font-size: 0.9rem;
+  font-family: 'Roboto Thin';
 }
