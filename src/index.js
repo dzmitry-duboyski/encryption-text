@@ -48,14 +48,11 @@ const eventListener = (e) => {
 document.addEventListener('click', eventListener)
 
 window.addEventListener('scroll', function() {
-const Top = document.querySelector('body').offsetTop
-console.log(Top)
+  // const Top = document.querySelector('body').offsetTop
 
   if(pageYOffset > 200){
-    console.log('показать')
     document.querySelector('.scrollup').classList.remove('scrollup_hidden')
   } else {
-    console.log('скрыть')
     document.querySelector('.scrollup').classList.add('scrollup_hidden')
   }
 });
