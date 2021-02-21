@@ -8,4 +8,27 @@
   position: fixed;
   bottom: 60px;
   right: 30px;
+
+  @media (max-width: 630px) { 
+    bottom: 20px;
+    right: 20px;
+
+    
+    .scrollup__image {
+      
+      background-color: #818183;
+      border-radius: 25px;
+    }
+  }
+
+  @media (max-width: 300px) { 
+    bottom: 20px;
+    right: 20px;
+
+    .scrollup__image {
+      height: 25px;
+      width: 25px;
+    }
+  }
 }
+

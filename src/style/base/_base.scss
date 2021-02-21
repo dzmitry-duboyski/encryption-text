@@ -51,8 +51,7 @@ body {
 }
 
 .how-it-works {
-  height: 50vh;
-  min-height: 350px;
+  min-height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,7 +62,7 @@ body {
 }
 
 .application-area {
-  height: 50vh;
+  min-height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -17,4 +17,70 @@
     padding-left: 25px;
     padding-right: 25px;
   }
+
+
+  @media (max-width: 600px) { 
+    .header__logo {
+      display: none;
+    }
+
+    .container {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 345px) { 
+    .menu {
+      .menu__item {
+        padding-right: 5px;
+
+      }
+
+      .menu__link {
+          font-size: 0.9rem;
+      }
+
+      .language-list__item-link {
+        font-size: 0.9rem;
+      }
+
+      .language-swithing {
+        .language-list{
+          padding-inline-start: 10px;
+ 
+          .language-list__item-link{
+            font-size: 0.8rem;
+          }
+        }
+      }
+     }
+   }
+
+  @media (max-width: 228px) { 
+    height: 40px;
+
+    .menu {
+      .menu__item {
+        padding-right: 5px;
+      }
+
+      .menu__link {
+          font-size: 0.7rem;
+      }
+
+      .language-list__item-link {
+        font-size: 0.7rem;
+      }
+
+      .language-swithing {
+        .language-list{
+          padding-inline-start: 5px;
+ 
+          .language-list__item-link{
+            font-size: 0.5rem;
+          }
+        }
+      }
+     }
+   }
 }

@@ -26,8 +26,9 @@
 
     .encoder-block-start__textarea,
     .encoder-block-end__textarea {
-      width: 450px;
-      height: 200px;
+      width: 100%;
+      // width: 450px;
+      // height: 200px;
       padding: 20px;
       font-size: 1.1rem;   
       outline : none;
@@ -35,4 +36,8 @@
       border-top: none;
     }
   }
+
+
+
+
 }
