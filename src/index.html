@@ -13,10 +13,18 @@
         logo
       </div>
       <div class="menu menu_theme-default">
-        <div class="menu__item menu__item_active"><a href="#" class="menu__link menu__link_text-uppercase" data-menuItem="docs">docs</a></div>
-        <div class="menu__item"><a href="#" class="menu__link" data-menuItem="api">api</a></div>
-        <div class="menu__item"><a href="#" class="menu__link" data-menuItem="donate">donate</a></div>
-        <div class="menu__item"><a href="https://github.com/dzmitry-duboyski/encryption-text" class="menu__link" data-menuItem="gitHub">gitHub</a></div>
+        <div class="menu__item menu__item_active">
+          <a href="#" class="menu__link menu__link_text-uppercase" data-menuItem="docs">docs</a>
+        </div>
+        <div class="menu__item">
+          <a href="#" class="menu__link" data-menuItem="api">api</a>
+        </div>
+        <div class="menu__item">
+          <a href="#" class="menu__link" data-menuItem="donate">donate</a>
+        </div>
+        <div class="menu__item">
+          <a href="https://github.com/dzmitry-duboyski/encryption-text" class="menu__link" data-menuItem="gitHub">gitHub</a>
+        </div>
         <div class="language-swithing">
           <ul class="language-list">
             <li class="language-list__item">
@@ -41,18 +49,18 @@
         <div class="encoder-block-start">
           <div class="encoder-block-start__header" title="click to paste from clipboard">Insert your text</span>
           </div>
-            <textarea class="encoder-block-start__textarea" name="" id="" cols="30" rows="10" placeholder="type some text" ></textarea>
+            <textarea class="encoder-block-start__textarea" cols="30" rows="10" placeholder="type some text" ></textarea>
         </div>
         <div class="encoder-block-end">
           <div class="encoder-block-end__header">Get converted text</div>
-            <textarea class="encoder-block-end__textarea" name="" id="" cols="30" rows="10" disabled></textarea>
+            <textarea class="encoder-block-end__textarea" cols="30" rows="10" disabled></textarea>
         </div>
       </div>
     </div>
   </section>
   <section class="how-it-works">
     <div class="container">
-      <h3>How it works:</h3>
+      <h2>How it works:</h2>
       <p>The characters of the language you use when printing are contained in the unicode table. The characters used in your language occupy a specific range of the unicode table. The Unicode table includes characters from almost every written language in the world. Also in this table there are symbols that look similar or that can be understood in the same way.</p>
        <p>The main idea is to replace characters in your text with other characters from the code table that look the same or similar. After processing, the appearance of the text may change, but the meaning will not be lost. After replacing characters, your text will remain readable for humans, but processing it by various systems will be significantly complicated.
         Currently, only Russian is supported.</p>
@@ -60,7 +68,7 @@
   </section>
   <section class="application-area">
     <div class="container">
-      <h3>Application area:</h3>
+      <h2>Application area:</h2>
       <ul>
         <li>Complicating the search for text: the processed text will be difficult to find (in fact, these will already be other words, consisting of letters of different alphabets).
           For example: If you leave a comment with this text, it will be difficult to find. Such text as a whole will be very poorly indexed, most likely such text will not be indexed in search engines.</li>
