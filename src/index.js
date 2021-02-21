@@ -1,10 +1,8 @@
 // import './js/app';
 import './style/main.scss';
 
-console.log('index.js')
-
 const eventListener = (e) => {
-  console.log(e)
+  // console.log(e)
   e.preventDefault();
 
   if(e.target.className == 'scrollup__image'){
