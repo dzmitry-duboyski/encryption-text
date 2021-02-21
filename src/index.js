@@ -45,10 +45,9 @@ const eventListener = (e) => {
 
 }
 
- document.addEventListener('click', eventListener)
+document.addEventListener('click', eventListener)
 
- window.addEventListener('scroll', function() {
-  // console.log(pageYOffset + 'px');
+window.addEventListener('scroll', function() {
 const Top = document.querySelector('body').offsetTop
 console.log(Top)
 

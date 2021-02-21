@@ -20,6 +20,7 @@
 
 
   @media (max-width: 600px) { 
+    
     .header__logo {
       display: none;
     }
@@ -45,10 +46,11 @@
       }
 
       .language-swithing {
-        .language-list{
+
+        .language-list {
           padding-inline-start: 10px;
  
-          .language-list__item-link{
+          .language-list__item-link {
             font-size: 0.8rem;
           }
         }
@@ -60,6 +62,7 @@
     height: 40px;
 
     .menu {
+
       .menu__item {
         padding-right: 5px;
       }
@@ -73,10 +76,11 @@
       }
 
       .language-swithing {
+
         .language-list{
           padding-inline-start: 5px;
  
-          .language-list__item-link{
+          .language-list__item-link {
             font-size: 0.5rem;
           }
         }

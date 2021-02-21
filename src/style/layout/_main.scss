@@ -2,12 +2,11 @@
 // This file contains all styles related to the main block.
 // -----------------------------------------------------------------------------
 
-
 .main {
+  display: flex;
   height: 100vh;
   max-height: 881px;
   min-height: 618px;
-  display: flex;
   justify-content: center;
   align-items: flex-start;
 

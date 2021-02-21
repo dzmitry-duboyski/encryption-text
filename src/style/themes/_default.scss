@@ -3,16 +3,12 @@
 // default one.
 // -----------------------------------------------------------------------------
 
-
 /** 
-*
-* Color from Header
-*
+* Color from the Header block.
 */
 .header.header_theme-default {
   background-color: hsl(80, 3%, 19%);
 }
-
 
 .menu.menu_theme-default {
 
@@ -31,7 +27,6 @@
   }
 } 
 
-
 .language-list__item-link{
   color: #ababa4;
   text-decoration: none;
@@ -48,13 +43,8 @@
 }
 
 
-
-
-
 /** 
-*
-* Color from Main
-*
+* Color from the Main block.
 */
 .main {
   background-color: hsl(75, 3%, 23%);;
@@ -85,13 +75,8 @@ $encoder-block__border: hsl(84, 3%, 38%);
 }
 
 
-
-
-
 /** 
-*
-* Color from block 'how-it-works'
-*
+* Color from block 'how-it-works'.
 */
 .how-it-works {
   background-color: hsl(52, 16%, 82%);
@@ -99,13 +84,8 @@ $encoder-block__border: hsl(84, 3%, 38%);
 }
 
 
-
-
-
 /** 
-*
-* Color from block 'how-it-works'
-*
+* Color from block 'how-it-works'.
 */
 .application-area {
   background-color: hsl(240, 1%, 51%);
@@ -113,24 +93,16 @@ $encoder-block__border: hsl(84, 3%, 38%);
 }
 
 
-
-
 /** 
-*
-* Color from scrollup
-*
+* Color from scrollup.
 */
 .scrollup__image:hover{
   background-color:hsl(50, 89%, 65%);
 }
 
 
-
-
 /** 
-*
-* Color from Footer
-*
+* Color from Footer.
 */
 footer {
   background-color: hsl(80, 3%, 19%);

@@ -30,18 +30,8 @@ body {
 }
 
 /**
- * Basic styles for links
- */
-// a {
-//   color: $brand-color;
-//   text-decoration: none;
-
-// //   @include on-event {
-// //     color: $text-color;
-// //     text-decoration: underline;
-// //   }
-// }
-
+* Basic styles for block 'LOGO'
+*/
 .header__logo {
   opacity: 0;
   height: 35px;
@@ -50,6 +40,9 @@ body {
   color: #3b3c38;
 }
 
+/**
+* Basic styles for block 'how-it-works'
+*/
 .how-it-works {
   min-height: 50vh;
   display: flex;
@@ -61,9 +54,12 @@ body {
   }
 }
 
+/**
+* Basic styles for block 'application-area'
+*/
 .application-area {
-  min-height: 50vh;
   display: flex;
+  min-height: 50vh;
   justify-content: center;
   align-items: center;
 

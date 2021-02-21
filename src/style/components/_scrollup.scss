@@ -1,4 +1,8 @@
-.scrollup__image{
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the 'scroll up' component.
+// -----------------------------------------------------------------------------
+
+.scrollup__image {
   opacity: 1;
   height: 50px;
   width: 50px;
@@ -6,7 +10,7 @@
   transition: all 0.5s ease;
 }
 
-.scrollup__image:hover{
+.scrollup__image:hover {
   transition: all 0.5s ease;
   cursor: pointer;
 }
