@@ -75,6 +75,10 @@ module.exports = {
         { 
           from: path.resolve(__dirname,'src/assets/img/scrollup.png'),
           to: path.resolve(__dirname, 'dist') 
+        },
+        { 
+          from: path.resolve(__dirname,'src/js/LanguageSwitcher/translations/'),
+          to: path.resolve(__dirname, 'dist/translations') 
         }
       ]
     }),

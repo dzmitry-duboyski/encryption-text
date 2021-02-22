@@ -1,8 +1,11 @@
 // import './js/app';
 import './style/main.scss';
+import {Language} from './js/LanguageSwitcher/Language';
+
+const languageSwither = new Language();
+languageSwither.init();
 
 const eventListener = (e) => {
-  // console.log(e)
   e.preventDefault();
 
   if(e.target.className == 'scrollup__image'){
@@ -17,20 +20,21 @@ const eventListener = (e) => {
     alert(`section "${e.target.dataset.menuitem}" in development`)
   }
 
-  if(e.target.dataset.menuitem == 'donate'){
+  if(e.target.dataset.menuitem == 'donate') {
     alert(`section "${e.target.dataset.menuitem}" in development`)
   }
 
-  if(e.target.dataset.menuitem == 'gitHub'){
-    alert(`section "${e.target.dataset.menuitem}" in development`)
+  if(e.target.dataset.menuitem == 'gitHub') {
+    document.location.href = "https://github.com/dzmitry-duboyski/encryption-text";
   }
 
-  if(e.target.dataset.language == 'En'){
-    alert(`section "${e.target.dataset.language}" in development`)
+
+  if(e.target.dataset.language == 'en'){
+    languageSwither.clickHandler(e)
   }
   
-  if(e.target.dataset.language == 'Ru'){
-    alert(`section "${e.target.dataset.language}" in development`)
+  if(e.target.dataset.language == 'ru'){
+    languageSwither.clickHandler(e)
   }
 
   if(e.target.className == 'encoder-block-start__header'){
@@ -46,7 +50,6 @@ const eventListener = (e) => {
 document.addEventListener('click', eventListener)
 
 window.addEventListener('scroll', function() {
-  // const Top = document.querySelector('body').offsetTop
 
   if(pageYOffset > 200){
     document.querySelector('.scrollup').classList.remove('scrollup_hidden')

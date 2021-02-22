@@ -5,6 +5,8 @@
 .language-list {
   display: flex;
   align-items: baseline;
+  padding-left: 40px;
+  max-width: 80px;
 }
 
 .language-list__item {
