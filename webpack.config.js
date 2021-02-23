@@ -28,7 +28,7 @@ const isProd = !isDev;
 const filename = ext => isDev ? `[name].${ext}` :`[name].[fullhash].${ext}`;
 
 module.exports = {
-  context: path.resolve(__dirname, 'src'),
+  context: path.resolve(__dirname, './src'),
   mode: 'development',
   entry: {
     main: ['@babel/polyfill','./index.js'],
@@ -62,20 +62,20 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         { 
-          from: path.resolve(__dirname,'src/assets/favicon.png'),
-          to: path.resolve(__dirname, 'dist') 
+          from: path.resolve(__dirname,'./src/assets/favicon.png'),
+          to: path.resolve(__dirname, './dist') 
         },
         { 
-          from: path.resolve(__dirname,'src/assets/img/scrollup.png'),
-          to: path.resolve(__dirname, 'dist') 
+          from: path.resolve(__dirname,'./src/assets/img/scrollup.png'),
+          to: path.resolve(__dirname, './dist') 
         },
         { 
-          from: path.resolve(__dirname,'src/js/LanguageSwitcher/translations/'),
+          from: path.resolve(__dirname,'./src/js/LanguageSwitcher/translations/'),
           to: path.resolve(__dirname, 'dist/translations') 
         },
         { 
-          from: path.resolve(__dirname,'src/js/vendor/clipboard/clipboard.js'),
-          to: path.resolve(__dirname, 'dist/js/vendor/clipboard/') 
+          from: path.resolve(__dirname,'./src/js/vendor/clipboard/clipboard.js'),
+          to: path.resolve(__dirname, './dist/js/vendor/clipboard/') 
         }
       ]
     }),
