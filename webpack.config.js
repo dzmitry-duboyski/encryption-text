@@ -79,6 +79,10 @@ module.exports = {
         { 
           from: path.resolve(__dirname,'src/js/LanguageSwitcher/translations/'),
           to: path.resolve(__dirname, 'dist/translations') 
+        },
+        { 
+          from: path.resolve(__dirname,'src/js/vendor/clipboard/clipboard.js'),
+          to: path.resolve(__dirname, 'dist/js/vendor/clipboard/') 
         }
       ]
     }),

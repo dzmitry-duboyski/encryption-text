@@ -45,5 +45,6 @@
     "xml-loader": "^1.2.1"
   },
   "dependencies": {
+    "clipboard": "^2.0.6"
   }
 }

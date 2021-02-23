@@ -23,7 +23,7 @@
     }
 
     .main-wrapper{
-      // background-color: red;
+
       .main-wrapper__header {
         padding-top: 55px;
         font-size: 2rem;
@@ -34,23 +34,23 @@
         padding: 0;
         min-height: 36px;
       }
-      
     }
 
-    .encoder-container {
+      .encoder-container {
         flex-direction: column;
         min-height: 100px;
+
         .encoder-block-start,
         .encoder-block-end {
           width: 100%;
         }
         .encoder-block-start__textarea,
-        .encoder-block-end__textarea {
+        .encoder-block-end__outputText {
           // background-color: red;
           height: 225px
         }
       }
-    }
+  }
 
   @media (max-width: 216px) { 
     & {
@@ -79,16 +79,19 @@
         .encoder-block-start,
         .encoder-block-end {
           width: 100%;
-          
-          .encoder-block-start__header,
-          .encoder-block-end__header {
-            height: 40px;
-            font-size: 1rem;
-          }
-          .encoder-block-start__textarea{
-            font-size: 1rem;
-          }
+        }  
+
+        .encoder-block-start__header,
+        .encoder-block-end__header {
+          height: 40px;
+          font-size: 1rem;
         }
+
+        .encoder-block-start__textarea{
+          font-size: 1rem;
+        }
+
+       
       }
     }
   

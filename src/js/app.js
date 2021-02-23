@@ -1,63 +1,73 @@
-import {getEncriptingText} from "./getEncriptingText.js";
+import { getEncriptingText } from "./getEncriptingText.js";
+/**
+ * copying to the clipboard (implemented using the library Clipboard.JS)
+ */
 
-const view = {
-  showEndcriptionText: function (endcriptionText = '') {
-    const elEndcriptionText = document.getElementById('endcriptionText');
+
+export class App {
+  constructor() {
+    this.text = '';
+    this.endcriptionText = '';
+  }
+
+  init() {
+    this.autoCheckNewText()
+  }
+
+  static showEndcriptionText(endcriptionText = '') {
+    const elEndcriptionText = document.querySelector('#endcriptionText');
     elEndcriptionText.innerHTML = endcriptionText;
-  },
-  showMyModal: function () {
-    $('#myModal').modal('show');
-    this.hiheMyModal();
-  },
-  hiheMyModal: function () {
-    const hiheMyModal = () => $('#myModal').modal('hide'); 
-    setTimeout(hiheMyModal, 1000);
   }
-};
 
-const model = {
-  text: '',
-  encripting: function(inputText) {
-    const isEmptyInputText = !inputText;
-     if(isEmptyInputText) {
-       return alert("введите текст");
-     }
-     this.text = getEncriptingText(inputText).join('');
-     return this.text;
-  },
 
+  startEncripting() {
+    const inputText = document.querySelector("#textareaNotEncryptedText").value;
+
+    if(!inputText){
+     return console.error('введите текст');
+    }
+    this.endcriptionText = getEncriptingText(inputText).join('');
+    App.endcriptionText = this.endcriptionText;
+    App.showEndcriptionText(this.endcriptionText);
+  }
+
+  /**
+   * paste from clipboard to textarea
+   */
+  readFromClipboard(){
+
+    navigator.clipboard.readText()
+    .then(text => {
+      // `text` - contains text read from the clipboard
+      document.querySelector('.encoder-block-start__textarea').value = text;
+    })
+    .catch(err => {
+      // the user may not have given permission to read data from the clipboard
+      console.log('Something went wrong', err);
+    });
+  }
+
+
+  /**
+   * recursively checking for text changes in textarea
+   */
+  autoCheckNewText(){
+
+    const oldText = String(this.text);
+    const newText = String(document.querySelector('#textareaNotEncryptedText').value);
+
+    if(oldText === newText){
+      return setTimeout(() => {
+        this.autoCheckNewText();
+      }, 200);
+    } else {
+      this.text = newText
+
+      this.startEncripting(this.text);
+      console.log()
+      setTimeout(() => {
+      this.autoCheckNewText();
+    }, 200);
+    }
+  }
 }
-
-const controller = {
-  handleClickEncryption: function () {
-    const inputText = document.querySelector("#textareaNotEncriptionText").value;
-    let result = model.encripting(inputText);
-    view.showEndcriptionText(result);
-  },
-  handleClickCopyText: function() {
-    const outputText = document.querySelector("#endcriptionText").innerText;
-    const outputTextArea = document.querySelector("#outputTextArea");
-    outputTextArea.value = outputText;
-    console.log(outputText)
-    outputTextArea.select();
-    document.execCommand("copy");
-    
-    view.showMyModal();
-  }
-};
-
- (function(){
-   const app = {
-     init: function () {
-      this.event();
-     },
-     event: function () {
-       const elementStart = document.getElementById('buttonStartEncryptyon');
-       elementStart.onclick = controller.handleClickEncryption;
-       
-       const elementCopy = document.getElementById('endcriptionText');
-       elementCopy.onclick = controller.handleClickCopyText;
-     },
-   };
-   app.init();
- }());

@@ -1,11 +1,18 @@
-// import './js/app';
+import {App} from './js/App';
 import './style/main.scss';
 import {Language} from './js/LanguageSwitcher/Language';
 
 const languageSwither = new Language();
 languageSwither.init();
 
-const eventListener = (e) => {
+const app = new App();
+app.init();
+
+/**
+ * copying to the clipboard (implemented using the library Clipboard.JS)
+ */
+
+const clickHandler = (e) => {
   e.preventDefault();
 
   if(e.target.className == 'scrollup__image'){
@@ -28,7 +35,6 @@ const eventListener = (e) => {
     document.location.href = "https://github.com/dzmitry-duboyski/encryption-text";
   }
 
-
   if(e.target.dataset.language == 'en'){
     languageSwither.clickHandler(e)
   }
@@ -38,19 +44,14 @@ const eventListener = (e) => {
   }
 
   if(e.target.className == 'encoder-block-start__header'){
-    console.log('ctrl+v')
+    app.readFromClipboard();
   }
-
-  if(e.target.className == 'encoder-block-end__header' | e.target.className == 'encoder-block-end__textarea'){
-    console.log('ctrl+c')
-  }  
 
 }
 
-document.addEventListener('click', eventListener)
+document.addEventListener('click', clickHandler)
 
 window.addEventListener('scroll', function() {
-
   if(pageYOffset > 200){
     document.querySelector('.scrollup').classList.remove('scrollup_hidden')
   } else {

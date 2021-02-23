@@ -41,11 +41,11 @@
         <div class="encoder-block-start">
           <div class="encoder-block-start__header" title="click to paste from clipboard" data-i18n="insertYourText"></span>
           </div>
-            <textarea class="encoder-block-start__textarea" cols="30" rows="10" placeholder="Type some text" data-i18n="inputTextAria"></textarea>
+            <textarea id="textareaNotEncryptedText" class="encoder-block-start__textarea" cols="30" rows="10" placeholder="Type some text" data-i18n="inputTextAria" autofocus></textarea>
         </div>
         <div class="encoder-block-end">
-          <div class="encoder-block-end__header" data-i18n="сonvertedText"></div>
-            <textarea class="encoder-block-end__textarea" cols="30" rows="10" disabled></textarea>
+          <div class="encoder-block-end__header btn-clipboard" data-clipboard-target="#endcriptionText" title="click to copy to clipboard" data-i18n="сonvertedText"></div>
+            <div id="endcriptionText" class="encoder-block-end__outputText"></div>
         </div>
       </div>
     </div>
@@ -71,5 +71,15 @@
       <p>© 2021</p>
     </div>
   </footer>
+  <script  src = "./js/vendor/clipboard/clipboard.js"></script>
+  <script>
+    var clipboard = new ClipboardJS('.btn-clipboard');
+      clipboard.on('success', function (e) {
+      // console.info('Action:', e.action);
+      // console.info('Text:', e.text);
+      // console.info('Trigger:', e.trigger);
+      e.clearSelection();
+      });
+  </script>
 </body>
 </html>

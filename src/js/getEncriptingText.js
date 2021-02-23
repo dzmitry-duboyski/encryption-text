@@ -38,10 +38,10 @@ export function getEncriptingText(inputText) {
     if(isAlternativeSymbols) {
       const outputEl = el.replace('*','')
       const newWord = String.fromCodePoint(Number(outputEl));
-      return `<span class="alternativeSimbol">${newWord}</span>`;
+      return `<span class="alternativeSymbol">${newWord}</span>`;
     }
     const oldWord = String.fromCodePoint(Number(el));
-    return `<span class="normalSimbol">${oldWord}</span>`;
+    return `<span class="normalSymbol">${oldWord}</span>`;
   })
 
   return resultText;

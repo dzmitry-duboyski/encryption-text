@@ -17,6 +17,18 @@
   .encoder-block-end {
     width: 50%;
 
+    .encoder-block-end__outputText {
+      height: 241px;
+      overflow: scroll;
+
+      .alternativeSymbol{
+        color: #f0d030;
+      }
+
+      .normalSymbol{
+      }
+    }
+
     .encoder-block-start__header,
     .encoder-block-end__header {
       height: 50px;
@@ -24,18 +36,26 @@
       font-size: 1.5rem;
     }
 
+    .encoder-block-end__header,
     .encoder-block-start__header {
       cursor: pointer;
+      &:hover{
+        background-color: hsl(72, 3%, 32%);
+        transition: 0.3s;
+      }
     }
 
     .encoder-block-start__textarea,
-    .encoder-block-end__textarea {
+    .encoder-block-end__outputText {
       width: 100%;
       padding: 20px;
       font-size: 1.1rem;   
       outline : none;
       resize : none;
       border-top: none;
+
+      overflow-x:hidden;
+      @extend %custom-scroll; 
     }
   }
 }
