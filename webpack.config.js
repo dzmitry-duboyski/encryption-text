@@ -38,13 +38,6 @@ module.exports = {
     path: path.resolve(__dirname, './dist'),
     // publicPath: '/',
   },
-  resolve: {
-    alias: {
-      '@models': path.resolve(__dirname,'src/models'),      
-      '@': path.resolve(__dirname,'src'),
-      '@fonts': path.resolve(__dirname, 'src/assets/fonts/Roboto')
-    }
-  },
   // optimization: optimization(),
   devServer: {
       contentBase: './dist',
