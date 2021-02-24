@@ -1,12 +1,12 @@
-import {app} from './js/app.js';
+import {App} from './js/App.js';
 import './style/main.scss';
 import {Language} from './js/LanguageSwitcher/Language.js';
 
 const languageSwither = new Language();
 languageSwither.init();
 
-const App = new app();
-App.init();
+const app = new App();
+app.init();
 
 /**
  * copying to the clipboard (implemented using the library Clipboard.JS)
