@@ -1,7 +1,8 @@
 
 # Deploy: [encryption-text.netlify.app](https://encryption-text.netlify.app/)
 
-## Deploy status: [![Netlify Status](https://api.netlify.com/api/v1/badges/599620a0-36f3-47eb-9788-ee87b7e43d3b/deploy-status)](https://app.netlify.com/sites/encription-text/deploys)
+## Deploy status:[![Netlify Status](https://api.netlify.com/api/v1/badges/1a99a45f-5275-45bd-a325-b6629916fe7c/deploy-status)](https://app.netlify.com/sites/encryption-text/deploys)
+
 
 ---
 
