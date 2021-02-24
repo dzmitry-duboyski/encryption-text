@@ -1,4 +1,4 @@
-import {App} from './js/App';
+import {App} from './js/App.js';
 import './style/main.scss';
 import {Language} from './js/LanguageSwitcher/Language.js';
 

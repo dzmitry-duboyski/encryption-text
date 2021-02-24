@@ -28,7 +28,7 @@ const isProd = !isDev;
 const filename = ext => isDev ? `[name].${ext}` :`[name].[fullhash].${ext}`;
 
 module.exports = {
-  context: path.resolve(__dirname, 'src'),
+  context: path.resolve(__dirname, './src'),
   mode: 'development',
   entry: {
     main: ['@babel/polyfill','./index.js'],
@@ -38,13 +38,13 @@ module.exports = {
     path: path.resolve(__dirname, './dist'),
     // publicPath: '/',
   },
-  resolve: {
-    alias: {
-      '@models': path.resolve(__dirname,'src/models'),      
-      '@': path.resolve(__dirname,'src'),
-      '@fonts': path.resolve(__dirname, 'src/assets/fonts/Roboto')
-    }
-  },
+  // resolve: {
+  //   alias: {
+  //     '@models': path.resolve(__dirname,'src/models'),      
+  //     '@': path.resolve(__dirname,'src'),
+  //     '@fonts': path.resolve(__dirname, 'src/assets/fonts/Roboto')
+  //   }
+  // },
   // optimization: optimization(),
   devServer: {
       contentBase: './dist',
