@@ -2,7 +2,7 @@
   "name": "encryption-text",
   "version": "0.1.1",
   "description": "",
-  "main": "index.js",
+  "main": "./src/start.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "dev": "cross-env NODE_ENV=development webpack --mode development",
