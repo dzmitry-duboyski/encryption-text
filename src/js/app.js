@@ -70,4 +70,21 @@ export class App {
     }, 200);
     }
   }
+
+  showMessageCopied(){
+    const elem = document.querySelector('.copy-status')
+    elem.classList.remove('copy-status_hidden');
+    setTimeout(()=>{
+      elem.classList.add('copy-status_hidden')
+    },100)
+  }
+
+  showMessageInserted(){
+    const elem = document.querySelector('.insert-status')
+    elem.classList.remove('insert-status_hidden');
+    setTimeout(()=>{
+      elem.classList.add('insert-status_hidden')
+    },100)
+  }
+
 }

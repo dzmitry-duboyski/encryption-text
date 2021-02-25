@@ -15,37 +15,66 @@ app.init();
 const clickHandler = (e) => {
   e.preventDefault();
 
-  if(e.target.className == 'scrollup__image'){
+  const element = e.target;
+
+  const elenentsHeaderEncoderEnd = ['encoder-block-end__header', 'encoder-block-end__header-text', 'copy-status'];
+  const isClickOnEncoderBlockEnd = element.className.split(' ').filter((el) => {
+      return elenentsHeaderEncoderEnd.includes(el)
+  }).length;
+
+
+  // <div class="encoder-block-start__header" title="click to paste from clipboard" data-i18n="insertYourText">
+  // <div class="encoder-block-start__header-text" data-i18n="insertYourText"></div>
+  // <div class="insert-status insert-status_hidden" data-i18n="insertYourTextInsertStatus"></div> 
+
+
+  const elenentsHeaderEncoderStart = ['encoder-block-start__header', 'encoder-block-start__header-text', 'insert-status'];
+  const isClickOnEncoderBlockStart = element.className.split(' ').filter((el) => {
+      return elenentsHeaderEncoderStart.includes(el)
+  }).length;
+
+
+
+  if(element.className == 'scrollup__image'){
     document.querySelector('body').scrollIntoView({behavior: "smooth", block: 'start'})
   }
 
-  if(e.target.dataset.menuitem == 'docs'){
+  if(element.dataset.menuitem == 'docs'){
     alert(`section "${e.target.dataset.menuitem}" in development`)
   }
 
-  if(e.target.dataset.menuitem == 'api'){
+  if(element.dataset.menuitem == 'api'){
     alert(`section "${e.target.dataset.menuitem}" in development`)
   }
 
-  if(e.target.dataset.menuitem == 'donate') {
+  if(element.dataset.menuitem == 'donate') {
     alert(`section "${e.target.dataset.menuitem}" in development`)
   }
 
-  if(e.target.dataset.menuitem == 'gitHub') {
+  if(element.dataset.menuitem == 'gitHub') {
     document.location.href = "https://github.com/dzmitry-duboyski/encryption-text";
   }
 
-  if(e.target.dataset.language == 'en'){
+  if(element.dataset.language == 'en'){
     languageSwither.clickHandler(e)
   }
   
-  if(e.target.dataset.language == 'ru'){
+  if(element.dataset.language == 'ru'){
     languageSwither.clickHandler(e)
   }
 
-  if(e.target.className == 'encoder-block-start__header'){
+  if(element.className == 'encoder-block-start__header'){
     app.readFromClipboard();
   }
+
+  if(isClickOnEncoderBlockEnd){
+    app.showMessageCopied();
+  }
+
+  if(isClickOnEncoderBlockStart){
+    app.showMessageInserted();
+  }
+
 
 }
 

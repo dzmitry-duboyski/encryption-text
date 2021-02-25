@@ -13,6 +13,46 @@
 .encoder-container {
   display: flex;
 
+  .encoder-block-start__header, 
+  .encoder-block-end__header {
+    position: relative;
+  }
+
+
+
+  .copy-status,
+  .insert-status {
+    position: absolute;
+    top: 15px;
+    right: 5px;
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 25px;
+    font-family: 'Roboto Thin';
+    font-size: 15px;
+    color: #ffffff;
+    border: 1px solid #5c6160;
+
+    &_hidden {
+      opacity: 0;
+      visibility: hidden;
+      transition: 2s opacity, 2s visibility;
+    }
+  }
+
+  .copy-status{
+    background-color: #17590d;
+  }
+
+  .insert-status{
+    background-color: #0d3459;
+  }
+
+
   .encoder-block-start,
   .encoder-block-end {
     width: 50%;
@@ -28,12 +68,13 @@
       .normalSymbol{
       }
     }
-
+  
     .encoder-block-start__header,
     .encoder-block-end__header {
       height: 50px;
       padding: 10px;
       font-size: 1.5rem;
+      overflow: clip;
     }
 
     .encoder-block-end__header,
@@ -49,13 +90,11 @@
     .encoder-block-end__outputText {
       width: 100%;
       max-width: 50vw;
-      // resize: none;
       padding: 20px;
       font-size: 1.1rem;   
       outline : none;
       resize : none;
       border-top: none;
-
       overflow-x:hidden;
       @extend %custom-scroll; 
     }
