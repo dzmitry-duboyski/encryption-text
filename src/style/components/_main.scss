@@ -48,6 +48,8 @@
     .encoder-block-start__textarea,
     .encoder-block-end__outputText {
       width: 100%;
+      max-width: 50vw;
+      // resize: none;
       padding: 20px;
       font-size: 1.1rem;   
       outline : none;

@@ -39,15 +39,19 @@
       .encoder-container {
         flex-direction: column;
         min-height: 100px;
+        align-items: center;
 
         .encoder-block-start,
         .encoder-block-end {
           width: 100%;
-        }
-        .encoder-block-start__textarea,
-        .encoder-block-end__outputText {
-          // background-color: red;
-          height: 225px
+          max-width: 95vw;
+
+          .encoder-block-start__textarea,
+          .encoder-block-end__outputText {
+            height: 225px;
+            max-width: 95vw;
+          }
+
         }
       }
   }
