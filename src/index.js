@@ -22,12 +22,6 @@ const clickHandler = (e) => {
       return elenentsHeaderEncoderEnd.includes(el)
   }).length;
 
-
-  // <div class="encoder-block-start__header" title="click to paste from clipboard" data-i18n="insertYourText">
-  // <div class="encoder-block-start__header-text" data-i18n="insertYourText"></div>
-  // <div class="insert-status insert-status_hidden" data-i18n="insertYourTextInsertStatus"></div> 
-
-
   const elenentsHeaderEncoderStart = ['encoder-block-start__header', 'encoder-block-start__header-text', 'insert-status'];
   const isClickOnEncoderBlockStart = element.className.split(' ').filter((el) => {
       return elenentsHeaderEncoderStart.includes(el)
@@ -63,17 +57,20 @@ const clickHandler = (e) => {
     languageSwither.clickHandler(e)
   }
 
-  if(element.className == 'encoder-block-start__header'){
+  // if(element.className == 'encoder-block-start__header'){
+  //   app.readFromClipboard();
+  // }
+
+  if(isClickOnEncoderBlockStart){
+    console.log(isClickOnEncoderBlockStart)
     app.readFromClipboard();
+    app.showMessageInserted();
   }
 
   if(isClickOnEncoderBlockEnd){
     app.showMessageCopied();
   }
 
-  if(isClickOnEncoderBlockStart){
-    app.showMessageInserted();
-  }
 
 
 }

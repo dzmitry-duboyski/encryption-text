@@ -35,7 +35,6 @@ export class App {
    * paste from clipboard to textarea
    */
   readFromClipboard(){
-
     navigator.clipboard.readText()
     .then(text => {
       // `text` - contains text read from the clipboard
