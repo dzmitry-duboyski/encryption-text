@@ -85,5 +85,4 @@ export class App {
       elem.classList.add('insert-status_hidden')
     },100)
   }
-
 }

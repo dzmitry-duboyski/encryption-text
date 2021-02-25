@@ -57,10 +57,6 @@ const clickHandler = (e) => {
     languageSwither.clickHandler(e)
   }
 
-  // if(element.className == 'encoder-block-start__header'){
-  //   app.readFromClipboard();
-  // }
-
   if(isClickOnEncoderBlockStart){
     console.log(isClickOnEncoderBlockStart)
     app.readFromClipboard();
@@ -70,9 +66,6 @@ const clickHandler = (e) => {
   if(isClickOnEncoderBlockEnd){
     app.showMessageCopied();
   }
-
-
-
 }
 
 document.addEventListener('click', clickHandler)
