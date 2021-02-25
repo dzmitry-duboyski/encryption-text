@@ -17,14 +17,24 @@ const clickHandler = (e) => {
 
   const element = e.target;
 
-  const elenentsHeaderEncoderEnd = ['encoder-block-end__header', 'encoder-block-end__header-text', 'copy-status'];
+  const elementsHeaderEncoderEnd = ['encoder-block-end__header', 'encoder-block-end__header-text', 'copy-status'];
   const isClickOnEncoderBlockEnd = element.className.split(' ').filter((el) => {
-      return elenentsHeaderEncoderEnd.includes(el)
+      return elementsHeaderEncoderEnd.includes(el)
   }).length;
 
-  const elenentsHeaderEncoderStart = ['encoder-block-start__header', 'encoder-block-start__header-text', 'insert-status'];
+  const elementsHeaderEncoderStart = ['encoder-block-start__header', 'encoder-block-start__header-text', 'insert-status'];
   const isClickOnEncoderBlockStart = element.className.split(' ').filter((el) => {
-      return elenentsHeaderEncoderStart.includes(el)
+      return elementsHeaderEncoderStart.includes(el)
+  }).length;
+
+  const elenentsBTNCleanStart = ['btn-clear-start', 'btn-clear-start__img'];
+  const isClickOnBTNCleanStart = element.className.split(' ').filter((el) => {
+      return elenentsBTNCleanStart.includes(el)
+  }).length;
+
+  const elenentsBTNCleanEnd = ['btn-clear-end', 'btn-clear-end__img'];
+  const isClickOnBTNCleanEnd = element.className.split(' ').filter((el) => {
+      return elenentsBTNCleanEnd.includes(el)
   }).length;
 
 
@@ -57,14 +67,24 @@ const clickHandler = (e) => {
     languageSwither.clickHandler(e)
   }
 
-  if(isClickOnEncoderBlockStart){
+  if(isClickOnEncoderBlockStart) {
     console.log(isClickOnEncoderBlockStart)
     app.readFromClipboard();
     app.showMessageInserted();
   }
 
-  if(isClickOnEncoderBlockEnd){
+  if(isClickOnEncoderBlockEnd) {
     app.showMessageCopied();
+  }
+
+  if(isClickOnBTNCleanStart) {
+    console.log('clear left')
+    document.querySelector('.encoder-block-start__textarea').value = '';
+  }
+
+  if(isClickOnBTNCleanEnd) {
+    console.log('clear right')
+    document.querySelector('.encoder-block-end__outputText').textContent = '';
   }
 }
 

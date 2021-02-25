@@ -51,6 +51,52 @@
     background-color: #0d3459;
   }
 
+  .endcriptionText-container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .encoder-block-start {
+    position: relative;
+  }
+
+  .btn-clear-start {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 25px;
+
+    .btn-clear-start__img {
+     height: 30px;
+     width: 30px;
+    }
+  }
+
+  .btn-clear-start:hover {
+    background-color: hsl(50, 89%, 65%);
+    transition: 0.3s linear;
+  }
+
+  .btn-clear-end {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    height: 30px;
+    width: 30px;
+    border-radius: 25px;
+
+    .btn-clear-end__img {
+     height: 30px;
+     width: 30px;
+    }
+  }
+
+  .btn-clear-end:hover {
+    background-color: hsl(50, 89%, 65%);
+    transition: 0.3s linear;
+  }
 
   .encoder-block-start,
   .encoder-block-end {
