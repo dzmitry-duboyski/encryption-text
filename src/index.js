@@ -32,9 +32,9 @@ const clickHandler = (e) => {
       return elenentsBTNCleanStart.includes(el)
   }).length;
 
-  const elenentsBTNCleanEnd = ['btn-clear-end', 'btn-clear-end__img'];
-  const isClickOnBTNCleanEnd = element.className.split(' ').filter((el) => {
-      return elenentsBTNCleanEnd.includes(el)
+  const elenentsBTNCopyEnd = ['btn-copy-end', 'btn-clear-copy__img'];
+  const isClickOnBTNCopyEnd = element.className.split(' ').filter((el) => {
+      return elenentsBTNCopyEnd.includes(el)
   }).length;
 
 
@@ -68,7 +68,7 @@ const clickHandler = (e) => {
   }
 
   if(isClickOnEncoderBlockStart) {
-    console.log(isClickOnEncoderBlockStart)
+    // console.log(isClickOnEncoderBlockStart)
     app.readFromClipboard();
     app.showMessageInserted();
   }
@@ -78,13 +78,13 @@ const clickHandler = (e) => {
   }
 
   if(isClickOnBTNCleanStart) {
-    console.log('clear left')
     document.querySelector('.encoder-block-start__textarea').value = '';
+    document.querySelector('.encoder-block-end__outputText').textContent = '';
   }
 
-  if(isClickOnBTNCleanEnd) {
-    console.log('clear right')
-    document.querySelector('.encoder-block-end__outputText').textContent = '';
+  if(isClickOnBTNCopyEnd) {
+    console.log('copy right');
+    app.showMessageCopied();
   }
 }
 

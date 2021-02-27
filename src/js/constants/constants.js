@@ -68,6 +68,9 @@ const characterList = {
   // 1102: ['','','','','','','','',''],//ю
   // 1103: ['','','','','','','','',''],//я
 
+  //En
+  //abcdefghiklmnopqrstvxyz
+  //ABCDEFGHIKLMNOPQRSTVXYZ
 }
 
 export {characterList};

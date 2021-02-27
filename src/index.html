@@ -51,14 +51,14 @@
 
         </div>
         <div class="encoder-block-end">
-          <div class="encoder-block-end__header btn-clipboard" data-clipboard-target="#endcriptionText" title="click to copy to clipboard" >
+          <div class="encoder-block-end__header btn-clipboard" data-clipboard-target="#endcriptionText" title="click to copy to clipboard">
             <div class="encoder-block-end__header-text" data-i18n="сonvertedText"></div> 
             <div class="copy-status copy-status_hidden" data-i18n="сonvertedTextСopied"></div> 
           </div>
           <div class="endcriptionText-container">
             <div id="endcriptionText" class="encoder-block-end__outputText"></div>
-            <div class="btn-clear-end">
-              <img class="btn-clear-end__img" src="./assets/img/resert1.png" alt="clear">
+            <div class="btn-copy-end" data-clipboard-target="#endcriptionText">
+              <img class="btn-copy__img btn-clipboard" src="./assets/img/btn-copy1.png" data-clipboard-target="#endcriptionText"  title="click to copy to clipboard">
             </div>
           </div>       
         </div>
@@ -90,6 +90,9 @@
   <script>
     var clipboard = new ClipboardJS('.btn-clipboard');
       clipboard.on('success', function (e) {
+      console.info('Action:', e.action);
+      console.info('Text:', e.text);
+      console.info('Trigger:', e.trigger);
       e.clearSelection();
       });
   </script>

@@ -62,8 +62,8 @@
 
   .btn-clear-start {
     position: absolute;
-    top: 60px;
-    right: 10px;
+    top: 53px;
+    right: 5px;
     height: 30px;
     width: 30px;
     border-radius: 25px;
@@ -79,21 +79,21 @@
     transition: 0.3s linear;
   }
 
-  .btn-clear-end {
+  .btn-copy-end {
     position: absolute;
-    top: 10px;
-    right: 20px;
+    top: 6px;
+    right: 18px;
     height: 30px;
     width: 30px;
     border-radius: 25px;
 
-    .btn-clear-end__img {
+    .btn-copy__img {
      height: 30px;
      width: 30px;
     }
   }
 
-  .btn-clear-end:hover {
+  .btn-copy-end:hover {
     background-color: hsl(50, 89%, 65%);
     transition: 0.3s linear;
   }
@@ -129,11 +129,18 @@
       }
     }
 
+    .encoder-block-start__textarea {
+      height: 241px;
+    }
+
     .encoder-block-start__textarea,
     .encoder-block-end__outputText {
       width: 100%;
       max-width: 50vw;
-      padding: 20px;
+      padding-left: 20px;
+      padding-top: 35px;
+      padding-right: 20px;
+      padding-bottom: 20px;
       font-size: 1.1rem;   
       outline : none;
       resize : none;
