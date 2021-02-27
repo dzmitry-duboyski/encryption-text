@@ -44,11 +44,9 @@
             <div class="insert-status insert-status_hidden" data-i18n="insertYourTextInsertStatus"></div> 
           </div>
             <textarea id="textareaNotEncryptedText" class="encoder-block-start__textarea" cols="30" rows="10" placeholder="Type some text" data-i18n="inputTextAria" autofocus></textarea>
-           
             <div class="btn-clear-start">
               <img class="btn-clear-start__img" src="./assets/img/resert1.png" alt="clear">
             </div>
-
         </div>
         <div class="encoder-block-end">
           <div class="encoder-block-end__header btn-clipboard" data-clipboard-target="#endcriptionText" title="click to copy to clipboard">
@@ -56,7 +54,7 @@
             <div class="copy-status copy-status_hidden" data-i18n="сonvertedTextСopied"></div> 
           </div>
           <div class="endcriptionText-container">
-            <div id="endcriptionText" class="encoder-block-end__outputText"></div>
+            <div id="endcriptionText" class="encoder-block-end__outputText">...</div>
             <div class="btn-copy-end" data-clipboard-target="#endcriptionText">
               <img class="btn-copy__img btn-clipboard" src="./assets/img/btn-copy1.png" data-clipboard-target="#endcriptionText"  title="click to copy to clipboard">
             </div>
@@ -90,9 +88,10 @@
   <script>
     var clipboard = new ClipboardJS('.btn-clipboard');
       clipboard.on('success', function (e) {
-      console.info('Action:', e.action);
-      console.info('Text:', e.text);
-      console.info('Trigger:', e.trigger);
+      // console.info('Action:', e.action);
+      // console.info('Text:', e.text);
+      // console.info('Trigger:', e.trigger);
+      // console.info('e:', e);
       e.clearSelection();
       });
   </script>

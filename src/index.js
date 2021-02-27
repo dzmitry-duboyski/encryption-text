@@ -14,9 +14,8 @@ app.init();
 
 const clickHandler = (e) => {
   e.preventDefault();
-
   const element = e.target;
-
+  
   const elementsHeaderEncoderEnd = ['encoder-block-end__header', 'encoder-block-end__header-text', 'copy-status'];
   const isClickOnEncoderBlockEnd = element.className.split(' ').filter((el) => {
       return elementsHeaderEncoderEnd.includes(el)
@@ -32,7 +31,7 @@ const clickHandler = (e) => {
       return elenentsBTNCleanStart.includes(el)
   }).length;
 
-  const elenentsBTNCopyEnd = ['btn-copy-end', 'btn-clear-copy__img'];
+  const elenentsBTNCopyEnd = ['btn-copy-end', 'btn-copy__img'];
   const isClickOnBTNCopyEnd = element.className.split(' ').filter((el) => {
       return elenentsBTNCopyEnd.includes(el)
   }).length;
@@ -68,7 +67,6 @@ const clickHandler = (e) => {
   }
 
   if(isClickOnEncoderBlockStart) {
-    // console.log(isClickOnEncoderBlockStart)
     app.readFromClipboard();
     app.showMessageInserted();
   }
@@ -79,11 +77,10 @@ const clickHandler = (e) => {
 
   if(isClickOnBTNCleanStart) {
     document.querySelector('.encoder-block-start__textarea').value = '';
-    document.querySelector('.encoder-block-end__outputText').textContent = '';
+    document.querySelector('.encoder-block-end__outputText').textContent = '...';
   }
 
   if(isClickOnBTNCopyEnd) {
-    console.log('copy right');
     app.showMessageCopied();
   }
 }
