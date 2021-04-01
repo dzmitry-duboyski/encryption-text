@@ -13,6 +13,91 @@
 .encoder-container {
   display: flex;
 
+  .encoder-block-start__header, 
+  .encoder-block-end__header {
+    position: relative;
+  }
+
+  .copy-status,
+  .insert-status {
+    position: absolute;
+    top: 15px;
+    right: 5px;
+    opacity: 1;
+    z-index: 1;
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 25px;
+    font-family: 'Roboto Thin';
+    font-size: 15px;
+    color: #ffffff;
+    border: 1px solid #5c6160;
+
+    &_hidden {
+      opacity: 0;
+      visibility: hidden;
+      transition: 2s opacity, 2s visibility;
+    }
+  }
+
+  .copy-status{
+    background-color: #17590d;
+  }
+
+  .insert-status{
+    background-color: #0d3459;
+  }
+
+  .endcriptionText-container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .encoder-block-start {
+    position: relative;
+  }
+
+  .btn-clear-start {
+    position: absolute;
+    top: 53px;
+    right: 5px;
+    height: 30px;
+    width: 30px;
+    border-radius: 25px;
+
+    .btn-clear-start__img {
+     height: 30px;
+     width: 30px;
+    }
+  }
+
+  .btn-clear-start:hover {
+    background-color: hsl(50, 89%, 65%);
+    transition: 0.3s linear;
+  }
+
+  .btn-copy-end {
+    position: absolute;
+    top: 6px;
+    right: 18px;
+    height: 30px;
+    width: 30px;
+    border-radius: 25px;
+
+    .btn-copy__img {
+     height: 30px;
+     width: 30px;
+    }
+  }
+
+  .btn-copy-end:hover {
+    background-color: hsl(50, 89%, 65%);
+    transition: 0.3s linear;
+  }
+
   .encoder-block-start,
   .encoder-block-end {
     width: 50%;
@@ -25,15 +110,14 @@
         color: #f0d030;
       }
 
-      .normalSymbol{
-      }
     }
-
+  
     .encoder-block-start__header,
     .encoder-block-end__header {
       height: 50px;
       padding: 10px;
       font-size: 1.5rem;
+      overflow: clip;
     }
 
     .encoder-block-end__header,
@@ -45,15 +129,22 @@
       }
     }
 
+    .encoder-block-start__textarea {
+      height: 241px;
+    }
+
     .encoder-block-start__textarea,
     .encoder-block-end__outputText {
       width: 100%;
-      padding: 20px;
+      max-width: 50vw;
+      padding-left: 20px;
+      padding-top: 35px;
+      padding-right: 20px;
+      padding-bottom: 20px;
       font-size: 1.1rem;   
       outline : none;
       resize : none;
       border-top: none;
-
       overflow-x:hidden;
       @extend %custom-scroll; 
     }

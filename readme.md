@@ -1,7 +1,8 @@
 
-# Deploy: [encryption-text.netlify.app](https://encryption-text.netlify.app/)
-
+# Deploy(stable version): [encryption-text.netlify.app](https://encryption-text.netlify.app)
 ## Deploy status:[![Netlify Status](https://api.netlify.com/api/v1/badges/1a99a45f-5275-45bd-a325-b6629916fe7c/deploy-status)](https://app.netlify.com/sites/encryption-text/deploys)
+# Deploy(dev version): [encryption-text-dev.netlify.app](https://encryption-text-dev.netlify.app)
+## [![Netlify Status](https://api.netlify.com/api/v1/badges/75685cfc-eefb-4133-a490-3185ae5d182c/deploy-status)](https://app.netlify.com/sites/encryption-text-dev/deploys)
 
 
 ---
@@ -24,7 +25,4 @@ The main idea is to replace characters in your text with other characters from t
 For example: If you leave a comment with this text, it will be difficult to find. Such text as a whole will be very poorly indexed, most likely such text will not be indexed in search engines.
 
 * `Bypass Censorship`: Processed text is difficult to moderate. When using various text censoring tools, the text is compared with a template test, the probability of finding the processed text in templates is small. It is highly likely that the text will pass the censorship filter if the filter developer did not consider such circumvention methods.
-
-
-***P.S. Currently, only Russian is supported.***
 

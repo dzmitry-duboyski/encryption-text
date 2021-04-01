@@ -14,39 +14,75 @@ app.init();
 
 const clickHandler = (e) => {
   e.preventDefault();
+  const element = e.target;
+  
+  const elementsHeaderEncoderEnd = ['encoder-block-end__header', 'encoder-block-end__header-text', 'copy-status'];
+  const isClickOnEncoderBlockEnd = element.className.split(' ').filter((el) => {
+      return elementsHeaderEncoderEnd.includes(el)
+  }).length;
 
-  if(e.target.className == 'scrollup__image'){
+  const elementsHeaderEncoderStart = ['encoder-block-start__header', 'encoder-block-start__header-text', 'insert-status'];
+  const isClickOnEncoderBlockStart = element.className.split(' ').filter((el) => {
+      return elementsHeaderEncoderStart.includes(el)
+  }).length;
+
+  const elenentsBTNCleanStart = ['btn-clear-start', 'btn-clear-start__img'];
+  const isClickOnBTNCleanStart = element.className.split(' ').filter((el) => {
+      return elenentsBTNCleanStart.includes(el)
+  }).length;
+
+  const elenentsBTNCopyEnd = ['btn-copy-end', 'btn-copy__img'];
+  const isClickOnBTNCopyEnd = element.className.split(' ').filter((el) => {
+      return elenentsBTNCopyEnd.includes(el)
+  }).length;
+
+
+
+  if(element.className == 'scrollup__image'){
     document.querySelector('body').scrollIntoView({behavior: "smooth", block: 'start'})
   }
 
-  if(e.target.dataset.menuitem == 'docs'){
+  if(element.dataset.menuitem == 'docs'){
     alert(`section "${e.target.dataset.menuitem}" in development`)
   }
 
-  if(e.target.dataset.menuitem == 'api'){
+  if(element.dataset.menuitem == 'api'){
     alert(`section "${e.target.dataset.menuitem}" in development`)
   }
 
-  if(e.target.dataset.menuitem == 'donate') {
+  if(element.dataset.menuitem == 'donate') {
     alert(`section "${e.target.dataset.menuitem}" in development`)
   }
 
-  if(e.target.dataset.menuitem == 'gitHub') {
+  if(element.dataset.menuitem == 'gitHub') {
     document.location.href = "https://github.com/dzmitry-duboyski/encryption-text";
   }
 
-  if(e.target.dataset.language == 'en'){
+  if(element.dataset.language == 'en'){
     languageSwither.clickHandler(e)
   }
   
-  if(e.target.dataset.language == 'ru'){
+  if(element.dataset.language == 'ru'){
     languageSwither.clickHandler(e)
   }
 
-  if(e.target.className == 'encoder-block-start__header'){
+  if(isClickOnEncoderBlockStart) {
     app.readFromClipboard();
+    app.showMessageInserted();
   }
 
+  if(isClickOnEncoderBlockEnd) {
+    app.showMessageCopied();
+  }
+
+  if(isClickOnBTNCleanStart) {
+    document.querySelector('.encoder-block-start__textarea').value = '';
+    document.querySelector('.encoder-block-end__outputText').textContent = '...';
+  }
+
+  if(isClickOnBTNCopyEnd) {
+    app.showMessageCopied();
+  }
 }
 
 document.addEventListener('click', clickHandler)

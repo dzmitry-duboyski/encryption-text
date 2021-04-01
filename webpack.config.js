@@ -83,6 +83,14 @@ module.exports = {
         { 
           from: path.resolve(__dirname,'src/js/vendor/clipboard/clipboard.js'),
           to: path.resolve(__dirname, 'dist/js/vendor/clipboard/') 
+        },
+        { 
+          from: path.resolve(__dirname,'src/assets/img/resert1.png'),
+          to: path.resolve(__dirname, 'dist/assets/img/') 
+        },
+        { 
+          from: path.resolve(__dirname,'src/assets/img/btn-copy1.png'),
+          to: path.resolve(__dirname, 'dist/assets/img/') 
         }
       ]
     }),

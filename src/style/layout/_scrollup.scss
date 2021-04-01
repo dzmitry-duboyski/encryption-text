@@ -7,6 +7,8 @@
   bottom: 60px;
   right: 30px;
 
+  z-index: 5;
+
   @media (max-width: 630px) { 
     bottom: 20px;
     right: 20px;

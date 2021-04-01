@@ -39,17 +39,30 @@
       .encoder-container {
         flex-direction: column;
         min-height: 100px;
+        align-items: center;
 
         .encoder-block-start,
         .encoder-block-end {
           width: 100%;
-        }
-        .encoder-block-start__textarea,
-        .encoder-block-end__outputText {
-          // background-color: red;
-          height: 225px
+          max-width: 95vw;
+          
+          .encoder-block-start__textarea,
+          .encoder-block-end__outputText {
+            height: 225px;
+            max-width: 95vw;
+            font-size: 15px;
+          }
         }
       }
+  }
+
+  @media (max-width: 350px) { 
+    .encoder-block-start__header-text,
+    .encoder-block-end__header-text {
+      font-size: 1rem;
+    }
+
+
   }
 
   @media (max-width: 216px) { 
@@ -58,7 +71,7 @@
     }
 
     .main-wrapper{
-      // background-color: red;
+
       .main-wrapper__header {
         padding-top: 36px;
         font-size: 1.5rem;
@@ -84,14 +97,17 @@
         .encoder-block-start__header,
         .encoder-block-end__header {
           height: 40px;
-          font-size: 1rem;
+        }
+
+        .encoder-block-start__header-text,
+        .encoder-block-end__header-text {
+          font-size: 0.8rem;
         }
 
         .encoder-block-start__textarea{
           font-size: 1rem;
         }
-
-       
+     
       }
     }
   

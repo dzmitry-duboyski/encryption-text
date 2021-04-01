@@ -24,7 +24,7 @@ export class App {
     const inputText = document.querySelector("#textareaNotEncryptedText").value;
 
     if(!inputText){
-     return console.error('введите текст');
+      return;
     }
     this.endcriptionText = getEncriptingText(inputText).join('');
     App.endcriptionText = this.endcriptionText;
@@ -35,11 +35,21 @@ export class App {
    * paste from clipboard to textarea
    */
   readFromClipboard(){
-
     navigator.clipboard.readText()
     .then(text => {
       // `text` - contains text read from the clipboard
-      document.querySelector('.encoder-block-start__textarea').value = text;
+
+      /**
+       * Here I check if the clipboard contains '...' then we pressed the copy button but did not enter the text yet.
+       *  In this case, I simply move the focus to the textarea so that the user can enter the text.
+       */
+        const defaultText = '...';
+        const isCopyDefaultText = text === defaultText;
+        if( isCopyDefaultText ) {
+          document.querySelector('.encoder-block-start__textarea').focus();
+        } else{
+          document.querySelector('.encoder-block-start__textarea').value = text;
+        }
     })
     .catch(err => {
       // the user may not have given permission to read data from the clipboard
@@ -69,5 +79,21 @@ export class App {
       this.autoCheckNewText();
     }, 200);
     }
+  }
+
+  showMessageCopied(){
+    const elem = document.querySelector('.copy-status')
+    elem.classList.remove('copy-status_hidden');
+    setTimeout(()=>{
+      elem.classList.add('copy-status_hidden')
+    },100)
+  }
+
+  showMessageInserted(){
+    const elem = document.querySelector('.insert-status')
+    elem.classList.remove('insert-status_hidden');
+    setTimeout(()=>{
+      elem.classList.add('insert-status_hidden')
+    },100)
   }
 }
