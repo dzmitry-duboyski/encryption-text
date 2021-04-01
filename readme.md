@@ -1,8 +1,6 @@
 
-# Deploy(stable version): [encryption-text.netlify.app](https://encryption-text.netlify.app)
-## Deploy status:[![Netlify Status](https://api.netlify.com/api/v1/badges/1a99a45f-5275-45bd-a325-b6629916fe7c/deploy-status)](https://app.netlify.com/sites/encryption-text/deploys)
-# Deploy(dev version): [encryption-text-dev.netlify.app](https://encryption-text-dev.netlify.app)
-## [![Netlify Status](https://api.netlify.com/api/v1/badges/75685cfc-eefb-4133-a490-3185ae5d182c/deploy-status)](https://app.netlify.com/sites/encryption-text-dev/deploys)
+# Deploy: [encryption-text.netlify.app](https://encryption-text.netlify.app)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1a99a45f-5275-45bd-a325-b6629916fe7c/deploy-status)](https://app.netlify.com/sites/encryption-text/deploys)
 
 
 ---
