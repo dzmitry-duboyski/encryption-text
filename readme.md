@@ -15,6 +15,8 @@ The characters of the language you use when printing are contained in the [Unico
 
 The main idea is to replace characters in your text with other characters from the code table that look the same or similar. After processing, the appearance of the text may change, but the meaning will not be lost. After replacing characters, your text will remain readable for humans, but processing it by various systems will be significantly complicated.
 
+P.S. At the moment, Latin and Cyrillic characters are supported. This means that characters that are not included in the Latin and Cyrillic alphabets will be skipped, and in the final version they will be displayed in their original form.
+
 
 
 ## **Application area:**
@@ -27,7 +29,7 @@ For example: If you leave a comment with this text, it will be difficult to find
 
 ## **Get started**
 
-1. Open the page [encryption-text.netlify.app](https://encryption-text.netlify.app).
+1. Open the page [encryption-text.netlify.app](https://encryption-text.netlify.app)
 
 2. Type\paste text in the 'Original text' field.
 
@@ -37,4 +39,7 @@ For example: If you leave a comment with this text, it will be difficult to find
   Paste text (Paste the text from the clipboard with one click on the field header 'Original text'):
   ![keyboard input](https://github.com/dzmitry-duboyski/encryption-text/blob/master/src/assets/media-readme.md/gif/paste_input.gif)
 
-3. The modified text is displayed in the 'Converted text' field, copy it.
+3. The modified text is displayed in the 'Converted text' field. Copy the text to the clipboard with one click on the 'Converted text' block or by clicking on the 'copy' button.
+
+  Copy to clipboard:
+  ![copy to clipboard](https://github.com/dzmitry-duboyski/encryption-text/blob/master/src/assets/media-readme.md/gif/copy_to_clipboard.gif)
