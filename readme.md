@@ -29,5 +29,5 @@ For example: If you leave a comment with this text, it will be difficult to find
 
 1. Open the page [encryption-text.netlify.app](https://encryption-text.netlify.app).
 2. Type\paste text in the 'Original text' field.
-  ![keyboard input](https://raw.githubusercontent.com/dzmitry-duboyski/encryption-text/dev/src/assets/media-readme.md\gif\keyboard_input.gif)
+  ![keyboard input](https://github.com/dzmitry-duboyski/encryption-text/blob/master/src/assets/media-readme.md/gif/keyboard_input.gif)
 3. The modified text is displayed in the 'Converted text' field, copy it.
