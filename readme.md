@@ -33,7 +33,7 @@ For example: If you leave a comment with this text, it will be difficult to find
   Type text:
   ![keyboard input](https://github.com/dzmitry-duboyski/encryption-text/blob/master/src/assets/media-readme.md/gif/keyboard_input.gif)
 
-  Paste text (Paste the text from the clipboard with one click on the field header 'Original text'):
+  or paste the text from the clipboard (by clicking on the header of the "Original text" field):
   ![keyboard input](https://github.com/dzmitry-duboyski/encryption-text/blob/master/src/assets/media-readme.md/gif/paste_input.gif)
 
 3. The modified text is displayed in the 'Converted text' field. Copy the text to the clipboard with one click on the 'Converted text' block or by clicking on the 'copy' button.
