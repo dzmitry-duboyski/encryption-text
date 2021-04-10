@@ -30,7 +30,8 @@ For example: If you leave a comment with this text, it will be difficult to find
 1. Open the page [encryption-text.netlify.app](https://encryption-text.netlify.app).
 
 2. Type\paste text in the 'Original text' field.
-    Type text:
+
+  Type text:
   ![keyboard input](https://github.com/dzmitry-duboyski/encryption-text/blob/master/src/assets/media-readme.md/gif/keyboard_input.gif)
 
   Paste text (Paste the text from the clipboard with one click on the field header 'Original text'):
