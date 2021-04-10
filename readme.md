@@ -5,9 +5,6 @@
 
 ---
 
-<!-- ![alphabet](https://raw.githubusercontent.com/dzmitry-duboyski/encryption-text/dev/src/assets/img/photo_alphabet.jpg) -->
-
-
 
 ## **How it works:**
 
@@ -43,3 +40,5 @@ For example: If you leave a comment with this text, it will be difficult to find
 
   Copy to clipboard:
   ![copy to clipboard](https://github.com/dzmitry-duboyski/encryption-text/blob/master/src/assets/media-readme.md/gif/copy_to_clipboard.gif)
+
+4. After copying, your text will appear in the clipboard, paste the text where you want using the keyboard shortcut 'Ctrl + V'.
