@@ -5,7 +5,7 @@
 
 ---
 
-![alphabet](https://raw.githubusercontent.com/dzmitry-duboyski/encryption-text/dev/src/assets/img/photo_alphabet.jpg)
+<!-- ![alphabet](https://raw.githubusercontent.com/dzmitry-duboyski/encryption-text/dev/src/assets/img/photo_alphabet.jpg) -->
 
 
 
@@ -24,3 +24,10 @@ For example: If you leave a comment with this text, it will be difficult to find
 
 * `Bypass Censorship`: Processed text is difficult to moderate. When using various text censoring tools, the text is compared with a template test, the probability of finding the processed text in templates is small. It is highly likely that the text will pass the censorship filter if the filter developer did not consider such circumvention methods.
 
+
+## **Get started**
+
+1. Open the page [encryption-text.netlify.app](https://encryption-text.netlify.app).
+2. Type\paste text in the 'Original text' field.
+  ![keyboard input](https://raw.githubusercontent.com/dzmitry-duboyski/encryption-text/dev/src/assets/media-readme.md\gif\keyboard_input.gif)
+3. The modified text is displayed in the 'Converted text' field, copy it.
